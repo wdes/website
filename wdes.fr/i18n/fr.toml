@@ -1,0 +1,89 @@
+
+[head]
+title = "Bienvenue chez Wdes SAS"
+motd = "Nous concevons les programmes dont vous rêvez"
+
+[menu]
+home = "Accueil"
+about = "À propos"
+services = "Services"
+
+[about]
+header = "À propos de Wdes SAS"
+content = """
+Wdes SAS est une entreprise Française qui aime concevoir des outils libres et open-source.
+L'entreprise offre également des services payants à d'autres entreprises ou particuliers.
+"""
+
+[about.projects.code-lts]
+content = """
+Code LTS est un projet de l'entreprise Wdes qui a pour but de maintenir vu vieux code
+et modernizer du vieux code pour prolonger son support.<br>
+Vous pouvez découvrir Code-LTS sur <a href="https://github.com/code-lts">GitHub</a>.
+"""
+
+[about.projects.sudo-bot]
+header = "Sudo-Bot"
+content = """
+Le projet Sudo-Bot est orienté vers la conception d'images Docker, les outils de déploiement et proposer des actions GitHub pour les développeurs.<br>
+Vous pouvez découvrir Sudo-Bot sur <a href="https://github.com/sudo-bot">GitHub</a>.
+"""
+
+[about.projects.air-balloon]
+header = "Air-Balloon"
+content = """
+Ce projet apportera un panneau de contrôle aux mainteneurs de projets open-source pour les accompagner dans leurs tâches du quotidien.<br>
+Vous pouvez découvrir Air-Balloon sur <a href="https://github.com/air-balloon">GitHub</a>.
+"""
+
+[about.projects.wdes]
+header = "Wdes"
+content = """
+L'espace Wdes est l'endroit ou nos outils et projets vivent, sur <a href="https://github.com/wdes">GitHub</a>.<br>
+Vous y trouverez principalement des librairies PHP et des outils NodeJS/Typescript, ainsi que du code Rust.
+"""
+
+[services]
+header = "Services"
+content = "Nous proposons des services de programmation, amélioration de code, support à long terme ainsi que le configuration de serveurs et leur mise en place."
+
+[services.dev]
+title = "Development services"
+content = "If you have PHP/html code or Angular code we can work on it."
+
+[services.code-improvement]
+title = "Améliorations de code"
+content = "Nous sommes capable d'améliorer votre code et vous faire gagner en performance !"
+
+[services.lts]
+title = "Support à long terme"
+content = "Vous avez du vieux code ? Nous pouvons vous aider à le migrer ou/et à le maintenir."
+
+[services.infra]
+title = "Services d'infrastructure"
+content = "Nous pouvons vous mettre en place un serveur, un réseau ou changer de version votre système d'exploitation."
+
+[contact]
+header = "Contact"
+content = "Envoyez nous un e-mail à <a href=\"%s\">%s</a>, nous seront heureux de vous répondre."
+
+[footer]
+designed_by = "Thème conçu par"
+motd = "Apporter une expertise à votre entreprise"
+email = "Email : "
+address = "Gourin (56110), Bretagne, France"
+legal-number = "SIRET : "
+
+[numbers]
+domains = "Domaines"
+orgs = "Organisations"
+composer = "Paquets composer"
+repos = "Dépôts"
+
+[hidden]
+back-to-top = "Retour en haut de page"
+twitter = "Twitter"
+github = "GitHub"
+gitlab = "GitLab"
+linkedin = "LinkedIn"
+email = "E-Mail"

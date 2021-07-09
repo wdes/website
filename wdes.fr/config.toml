@@ -1,0 +1,29 @@
+baseURL = "https://wdes.fr/"
+languageCode = "en"
+title = "Wdes SAS's website"
+copyright = "2014-2021 William Desportes"
+defaultContentLanguage = "fr"
+enableRobotsTXT = true
+uglyURLs = true
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.en]
+    title = "Wdes SAS website"
+    description = "Wdes SAS website"
+    weight = 1
+  [languages.fr]
+    title = "Wdes SAS - site web"
+    description = "Site web de Wdes SAS"
+    weight = 2
+
+[params]
+  legalNumber = "82956288300019"
+  [params.links]
+    github = "https://github.com/wdes"
+    gitlab = "https://gitlab.com/wdes"
+    twitter = "https://twitter.com/wdesfr"
+    linkedin = "https://www.linkedin.com/company/wdes/"
+    societeCom = "https://www.societe.com/societe/wdes-sas-829562883.html"
+    mailto = "mailto:contact@wdes.eu"
+    email = "contact@wdes.eu"

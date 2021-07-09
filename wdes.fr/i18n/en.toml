@@ -1,0 +1,90 @@
+
+[head]
+title = "Welcome to Wdes SAS"
+motd = "We design excellent software that you dream about"
+
+[menu]
+home = "Home"
+about = "About Us"
+services = "Services"
+
+[about]
+header = "About Wdes SAS"
+content = """
+Wdes SAS is a French company that focuses on building free and open-source tools.
+It also provides paid services to organizations.
+"""
+
+[about.projects.code-lts]
+header = "Code LTS"
+content = """
+Code LTS is a project of the Wdes company that focuses on supporting old code
+and modernizing old code to continue the support.<br>
+You can find Code-LTS on <a href="https://github.com/code-lts">GitHub</a>.
+"""
+
+[about.projects.sudo-bot]
+header = "Sudo-Bot"
+content = """
+The Sudo-Bot project focuses on bringing Docker images, deployment tools and GitHub actions to developers.<br>
+You can find Sudo-Bot on <a href="https://github.com/sudo-bot">GitHub</a>.
+"""
+
+[about.projects.air-balloon]
+header = "Air-Balloon"
+content = """
+This project will bring a dashboard for open-source maintainers and help with every day tasks.<br>
+You can find Air-Balloon on <a href="https://github.com/air-balloon">GitHub</a>.
+"""
+
+[about.projects.wdes]
+header = "Wdes"
+content = """
+The Wdes namespace is where our tools and projects live on <a href="https://github.com/wdes">GitHub</a>.<br>
+You will find mostly PHP libraries and some NodeJS/Typescript tools, some Rust code is also written there.
+"""
+
+[services]
+header = "Services"
+content = "We provide Web development services, code improvements, long term support as well as server configuration and setup."
+
+[services.dev]
+title = "Development services"
+content = "If you have PHP/html code or Angular code we can work on it."
+
+[services.code-improvement]
+title = "Code improvements"
+content = "We are able to improve your Web code and make your performance improve !"
+
+[services.lts]
+title = "Long term support"
+content = "You have old code ? We can help you migrate or provide support for it."
+
+[services.infra]
+title = "Infrastructure services"
+content = "We can setup a server or a network for you, or help you migrate your OS."
+
+[contact]
+header = "Contact"
+content = "Send us an email to <a href=\"%s\">%s</a>, we will be happy to help you."
+
+[footer]
+designed_by = "Theme designed by"
+motd = "Bring our expertise into your business"
+email = "Email: "
+address = "Gourin (56110), Britany, France"
+legal-number = "SIRET: "
+
+[numbers]
+domains = "Domains"
+orgs = "Organizations"
+composer = "Composer packages"
+repos = "Repositories"
+
+[hidden]
+back-to-top = "Back to top"
+twitter = "Twitter"
+github = "GitHub"
+gitlab = "GitLab"
+linkedin = "LinkedIn"
+email = "E-Mail"

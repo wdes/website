@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   version="1.1"
+   id="svg7"
+   sodipodi:docname="logo.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:export-filename="/mnt/Documents/Images/Wdes/2018_120x120.png"
+   inkscape:export-xdpi="22.500002"
+   inkscape:export-ydpi="22.500002">
+  <title
+     id="title883">Logo Wdes SAS</title>
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Logo Wdes SAS</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>William Desportes</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs11" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="833"
+     id="namedview9"
+     showgrid="false"
+     inkscape:zoom="0.5"
+     inkscape:cx="608.91121"
+     inkscape:cy="351.36686"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7"
+     inkscape:lockguides="false" />
+  <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+  <g
+     id="g5"
+     transform="matrix(1.2950601,0,0,1.2891034,-71.438607,-53.193898)">
+    <title
+       id="title2">Layer 1</title>
+    <path
+       id="svg_7"
+       d="m 106.9375,183.96987 59.97588,0.0262 28.54472,128.38596 34.9592,-126.72937 h 49.07119 l 35.27999,125.07278 28.21185,-126.75758 60.30875,0.0212 -61.25885,169.80777 h -56.76865 c -0.64149,0 -31.11047,-111.82002 -31.75195,-111.82002 -0.64149,0 -33.03483,111.82003 -33.67632,111.82002 H 163.06467 C 144.32319,297.20593 125.69882,240.5535 106.9375,183.96987 Z"
+       stroke-linecap="null"
+       stroke-linejoin="null"
+       inkscape:connector-curvature="0"
+       style="fill:#188fd1;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+       sodipodi:nodetypes="ccccccccccsccc" />
+  </g>
+</svg>

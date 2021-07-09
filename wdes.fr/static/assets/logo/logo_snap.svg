@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg7"
+   version="1.1"
+   height="218.92711"
+   width="383.79312">
+  <title
+     id="title883">Logo Wdes SAS</title>
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Logo Wdes SAS</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>William Desportes</dc:title>
+          </cc:Agent>
+        </dc:creator>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs11" />
+  <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+  <g
+     transform="matrix(1.2950601,0,0,1.2891034,-138.49049,-237.15359)"
+     id="g5">
+    <title
+       id="title2">Layer 1</title>
+    <path
+       style="fill:#188fd1;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+       stroke-linejoin="null"
+       stroke-linecap="null"
+       d="m 106.9375,183.96987 59.97588,0.0262 28.54472,128.38596 34.9592,-126.72937 h 49.07119 l 35.27999,125.07278 28.21185,-126.75758 60.30875,0.0212 -61.25885,169.80777 h -56.76865 c -0.64149,0 -31.11047,-111.82002 -31.75195,-111.82002 -0.64149,0 -33.03483,111.82003 -33.67632,111.82002 H 163.06467 C 144.32319,297.20593 125.69882,240.5535 106.9375,183.96987 Z"
+       id="svg_7" />
+  </g>
+</svg>

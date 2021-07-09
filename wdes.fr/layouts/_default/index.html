@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>{{ .Title }}</title>
+    <meta name="description" content="{{ .Description | default (.Summary | default .Site.Params.description ) }}">
+    <meta name="keywords" content="{{ (delimit .Keywords ",") | default .Site.Params.keywords }}">
+    <!--sse-->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@wdesfr" />
+    <meta name="twitter:title" content="Wdes SAS" />
+    <meta name="twitter:description" content="{{ .Description | default (.Summary | default .Site.Params.description ) }}" />
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}assets/logo/wdes_1024x1024.png" />
+    <meta name="p:domain_verify" content="4e98cb9abc0163d6ebb1b57e90fc35e3" />
+    <meta property="og:title" content="Wdes SAS" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ .Site.BaseURL }}" />
+    <meta property="og:image" content="{{ .Site.BaseURL }}assets/logo/wdes_1024x1024.png" />
+    <meta property="og:description" content="{{ .Description | default (.Summary | default .Site.Params.description ) }}" />
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "email": "{{ .Site.Params.links.email }}",
+            "logo": "{{ .Site.BaseURL }}assets/logo/wdes_x1024.png",
+            "url": "{{ .Site.BaseURL }}",
+            "name": "Wdes SAS",
+            "legalName": "WDES SAS",
+            "sameAs": [
+                "{{ .Site.Params.links.gitlab }}",
+                "{{ .Site.Params.links.github }}",
+                "{{ .Site.Params.links.twitter }}",
+                "{{ .Site.Params.links.linkedin }}"
+            ],
+            "funder": {
+                "@context": "http://schema.org",
+                "@type": "Person",
+                "url":"https://williamdes.eu"
+                "email": "williamdes@wdes.fr",
+                "jobTitle": "Developer",
+                "name": "William Desportes"
+            }
+        }
+    </script>
+    <!--/sse-->
+    <!-- Favicons -->
+    <link href="{{ .Site.BaseURL }}assets/logo/wdes_48x48.png" rel="icon">
+    <link href="{{ .Site.BaseURL }}assets/logo/wdes_96x96.png" rel="apple-touch-icon">
+
+    <!-- Vendor CSS Files -->
+    {{ $options := (dict "targetPath" "assets/vendor/bootstrap/css/bootstrap.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $bootstrapStyle := resources.Get "vendor/bootstrap/scss/bootstrap.scss"
+        | resources.ExecuteAsTemplate "vendor/bootstrap/scss/bootstrap.scss" .
+        | resources.ToCSS $options
+        | minify
+        | fingerprint "sha512" }}
+    <link href="{{ $bootstrapStyle.Permalink }}" rel="stylesheet" integrity="{{ $bootstrapStyle.Data.Integrity }}" crossorigin="anonymous">
+    <link rel="preload" href="{{ $bootstrapStyle.Permalink }}" as="style" integrity="{{ $bootstrapStyle.Data.Integrity }}" crossorigin="anonymous">
+    {{ $options := (dict "targetPath" "assets/vendor/aos/aos.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $aosStyle := resources.Get "vendor/aos/sass/aos.scss"
+        | resources.ExecuteAsTemplate "vendor/aos/sass/aos.scss" .
+        | resources.ToCSS $options
+        | minify
+        | fingerprint "sha512" }}
+    <link href="{{ $aosStyle.Permalink }}" rel="stylesheet" integrity="{{ $aosStyle.Data.Integrity }}" crossorigin="anonymous">
+    <link rel="preload" href="{{ $aosStyle.Permalink }}" as="style" integrity="{{ $aosStyle.Data.Integrity }}" crossorigin="anonymous">
+
+    <!-- Template Main CSS File -->
+    {{ $options := (dict "targetPath" "assets/css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $mainStyle := resources.Get "css/style.scss"
+        | resources.ExecuteAsTemplate "css/style.scss" .
+        | resources.ToCSS $options
+        | minify
+        | fingerprint "sha512" }}
+    <link href="{{ $mainStyle.Permalink }}" rel="stylesheet" integrity="{{ $mainStyle.Data.Integrity }}" crossorigin="anonymous">
+    <link rel="preload" href="{{ $mainStyle.Permalink }}" as="style"integrity="{{ $mainStyle.Data.Integrity }}" crossorigin="anonymous">
+
+    {{ $options := (dict "targetPath" "assets/vendor/MaterialDesignIcons/css/materialdesignicons.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $mdiStyle := resources.Get "vendor/MaterialDesignIcons/scss/materialdesignicons.scss"
+        | resources.ExecuteAsTemplate "vendor/MaterialDesignIcons/scss/materialdesignicons.scss" .
+        | resources.ToCSS $options
+        | minify
+        | fingerprint "sha512" }}
+    <link href="{{ $mdiStyle.Permalink }}" rel="stylesheet" integrity="{{ $mdiStyle.Data.Integrity }}" crossorigin="anonymous">
+
+    {{ $options := (dict "targetPath" "assets/vendor/font-mfizz/css/font-mfizz.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $fontMizzStyle := resources.Get "vendor/font-mfizz/font-mfizz.scss"
+        | resources.ExecuteAsTemplate "vendor/font-mfizz/font-mfizz.scss" .
+        | resources.ToCSS $options
+        | minify
+        | fingerprint "sha512" }}
+    <link href="{{ $fontMizzStyle.Permalink }}" rel="stylesheet" integrity="{{ $fontMizzStyle.Data.Integrity }}" crossorigin="anonymous">
+
+  <!-- =======================================================
+  * Template Name: Squadfree - v4.0.1
+  * Template URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="index.html"><span>Wdes</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">{{ i18n "menu.home" }}</a></li>
+          <li><a class="nav-link scrollto" href="#about">{{ i18n "menu.about" }}</a></li>
+          <li><a class="nav-link scrollto" href="#services">{{ i18n "menu.services" }}</a></li>
+        </ul>
+        <i class="mdi mdi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-up">
+      <h1>{{ i18n "head.title" }}</h1>
+      <h2>{{ i18n "head.motd" }}</h2>
+      <a href="#about" class="btn-get-started scrollto" title="{{ i18n "menu.about" }}"><i class="mdi mdi-chevron-double-down"></i></a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row no-gutters">
+          <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="content">
+              <h3>{{ i18n "about.header" }}</h3>
+              <p>{{ i18n "about.content" }}</p>
+            </div>
+          </div>
+          <div class="col-xl-7 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-receipt"></i>
+                  <h4>{{ i18n "about.projects.code-lts.header" }}</h4>
+                  <p>{{ i18n "about.projects.code-lts.content" | safeHTML }}</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bx bx-cube-alt"></i>
+                  <h4>{{ i18n "about.projects.sudo-bot.header" }}</h4>
+                  <p>{{ i18n "about.projects.sudo-bot.content" | safeHTML }}</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bx bx-images"></i>
+                  <h4>{{ i18n "about.projects.air-balloon.header" }}</h4>
+                  <p>{{ i18n "about.projects.air-balloon.content" | safeHTML }}</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bx bx-shield"></i>
+                  <h4>{{ i18n "about.projects.wdes.header" }}</h4>
+                  <p>{{ i18n "about.projects.wdes.content" | safeHTML }}</p>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2>{{ i18n "services.header" }}</h2>
+          <p>{{ i18n "services.content" }}</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up">
+              <h4 class="title"><a href="#contact">{{ i18n "services.dev.title" }}</a></h4>
+              <p class="description">{{ i18n "services.dev.content" }}</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <h4 class="title"><a href="#contact">{{ i18n "services.code-improvement.title" }}</a></h4>
+              <p class="description">{{ i18n "services.code-improvement.content" }}</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <h4 class="title"><a href="#contact">{{ i18n "services.lts.title" }}</a></h4>
+              <p class="description">{{ i18n "services.lts.content" }}</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <h4 class="title"><a href="#contact">{{ i18n "services.infra.title" }}</a></h4>
+              <p class="description">{{ i18n "services.infra.content" }}</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts  section-bg">
+      <div class="container">
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>{{ i18n "numbers.domains" }}</strong></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>{{ i18n "numbers.orgs" }}</strong></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>{{ i18n "numbers.composer" }}</strong></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>{{ i18n "numbers.repos" }}</strong></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>{{ i18n "contact.header" }}</h2>
+          <p>{{ printf (i18n "contact.content") .Site.Params.links.mailto .Site.Params.links.email | safeHTML }}</p>
+        </div>
+
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>Wdes</h3>
+              <p class="pb-3"><em>{{ i18n "footer.motd" }}</em></p>
+              <p>
+                {{ i18n "footer.address" }}<br><br>
+                <strong>{{ i18n "footer.email" }}</strong>{{ .Site.Params.links.email }}<br>
+                <strong>{{ i18n "footer.legal-number" }}</strong><a href="{{ .Site.Params.links.societeCom }}" target="_blank" rel="noopener">{{ .Site.Params.legalNumber }}</a><br>
+              </p>
+              <div class="social-links mt-3">
+                <!--sse-->
+                <a href="{{ .Site.Params.links.twitter }}" target="_blank" rel="noopener" class="twitter" title="{{ i18n "hidden.twitter" }}"><i class="mdi mdi-twitter"></i></a>
+                <a href="{{ .Site.Params.links.github }}" target="_blank" rel="noopener" class="github" title="{{ i18n "hidden.github" }}"><i class="mdi mdi-github"></i></a>
+                <a href="{{ .Site.Params.links.github }}" target="_blank" rel="noopener" class="gitlab" title="{{ i18n "hidden.gitlab" }}"><i class="mdi mdi-gitlab"></i></a>
+                <a href="{{ .Site.Params.links.linkedin }}" target="_blank" rel="noopener" class="linkedin" title="{{ i18n "hidden.linkedin" }}"><i class="mdi mdi-linkedin"></i></a>
+                <a href="{{ .Site.Params.links.mailto }}" target="_blank" rel="noopener" class="email" title="{{ i18n "hidden.email" }}"><i class="mdi mdi-email"></i></a>
+                <!--/sse-->
+              </div>
+            </div>
+          </div>
+
+            <!--
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+          -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright <strong><span>{{ .Site.Copyright }}</span></strong>
+        </div>
+        <div class="credits">
+            {{ i18n "footer.designed_by" }}&nbsp;<a href="https://bootstrapmade.com/"
+                target="_blank" rel="nofollow noopener">BootstrapMade</a>
+        </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" title="{{ i18n "hidden.back-to-top" }}"><i class="mdi mdi-chevron-up"></i></a>
+
+
+    <!-- Vendor JS Files -->
+    {{ $purecounterLibJs := resources.Get "vendor/purecounter.js/purecounter.js"
+        | fingerprint "sha512"
+    }}
+    <script src="{{ $purecounterLibJs.Permalink }}" integrity="{{ $purecounterLibJs.Data.Integrity }}" crossorigin="anonymous"></script>
+    {{ $aosLibJs := resources.Get "vendor/aos/js/aos.js"
+        | fingerprint "sha512"
+    }}
+    <script src="{{ $aosLibJs.Permalink }}" integrity="{{ $aosLibJs.Data.Integrity }}" crossorigin="anonymous"></script>
+    {{ $bootstrapLibJs := resources.Get "vendor/bootstrap/js/bootstrap.bundle.js"
+        | fingerprint "sha512"
+    }}
+    <script src="{{ $bootstrapLibJs.Permalink }}" integrity="{{ $bootstrapLibJs.Data.Integrity }}" crossorigin="anonymous"></script>
+    {{ $typedLibJs := resources.Get "vendor/typed.js/typed.min.js"
+        | fingerprint "sha512"
+    }}
+    <script src="{{ $typedLibJs.Permalink }}" integrity="{{ $typedLibJs.Data.Integrity }}" crossorigin="anonymous"></script>
+
+    <!-- Template Main JS File -->
+    {{ $options := (dict "targetPath" "assets/js/main.js" "enableSourceMap" true) }}
+    {{ $mainJs := resources.Get "js/main.js"
+        | js.Build $options
+        | minify
+        | fingerprint "sha512"
+    }}
+    <script src="{{ $mainJs.Permalink }}" integrity="{{ $mainJs.Data.Integrity }}" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
