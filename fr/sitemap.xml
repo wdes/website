@@ -2,32 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wdes.fr/fr/.html</loc>
-  </url><url>
-    <loc>https://wdes.fr/fr/categories.html</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://wdes.fr/en/categories.html"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://wdes.fr/fr/categories.html"
-                />
-  </url><url>
-    <loc>https://wdes.fr/fr/tags.html</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://wdes.fr/en/tags.html"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://wdes.fr/fr/tags.html"
-                />
-  </url><url>
     <loc>https://wdes.fr/fr/</loc>
     <xhtml:link
                 rel="alternate"
@@ -38,6 +12,18 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://wdes.fr/fr/"
+                />
+  </url><url>
+    <loc>https://wdes.fr/fr/legal.html</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://wdes.fr/en/legal.html"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://wdes.fr/fr/legal.html"
                 />
   </url>
 </urlset>
