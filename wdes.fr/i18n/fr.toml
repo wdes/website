@@ -17,8 +17,7 @@ L'entreprise offre également des services payants à d'autres entreprises ou pa
 
 [about.projects.code-lts]
 content = """
-Code LTS est un projet de l'entreprise Wdes qui a pour but de maintenir vu vieux code
-et modernizer du vieux code pour prolonger son support.<br>
+Code LTS est un projet de l'entreprise Wdes qui a pour but de maintenir et modernizer du vieux code pour prolonger son support.<br>
 Vous pouvez découvrir Code-LTS sur <a href="https://github.com/code-lts">GitHub</a>.
 """
 
@@ -39,7 +38,7 @@ Vous pouvez découvrir Air-Balloon sur <a href="https://github.com/air-balloon">
 [about.projects.wdes]
 header = "Wdes"
 content = """
-L'espace Wdes est l'endroit ou nos outils et projets vivent, sur <a href="https://github.com/wdes">GitHub</a>.<br>
+L'espace Wdes est l'endroit où nos outils et projets vivent, sur <a href="https://github.com/wdes">GitHub</a>.<br>
 Vous y trouverez principalement des librairies PHP et des outils NodeJS/Typescript, ainsi que du code Rust.
 """
 
