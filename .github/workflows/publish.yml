@@ -8,7 +8,7 @@ on:
 jobs:
     publish-pages:
         environment:
-            name: main
+            name: Publish website
             url: https://wdes.fr
         runs-on: ubuntu-latest
         steps:
