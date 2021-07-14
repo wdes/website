@@ -50,6 +50,7 @@
     <!-- Favicons -->
     <link href="{{ .Site.BaseURL }}assets/logo/wdes_48x48.png" rel="icon">
     <link href="{{ .Site.BaseURL }}assets/logo/wdes_96x96.png" rel="apple-touch-icon">
+    <link href="{{ .Site.BaseURL }}favicon.ico" rel="shortcut icon" type="image/x-icon">
 
     <!-- Vendor CSS Files -->
     {{ $options := (dict "targetPath" "assets/vendor/bootstrap/css/bootstrap.css" "outputStyle" "compressed" "enableSourceMap" true) }}
@@ -301,34 +302,11 @@
                 <a href="{{ .Site.Params.links.github }}" target="_blank" rel="noopener" class="gitlab" title="{{ i18n "hidden.gitlab" }}"><i class="mdi mdi-gitlab"></i></a>
                 <a href="{{ .Site.Params.links.linkedin }}" target="_blank" rel="noopener" class="linkedin" title="{{ i18n "hidden.linkedin" }}"><i class="mdi mdi-linkedin"></i></a>
                 <a href="{{ .Site.Params.links.mailto }}" target="_blank" rel="noopener" class="email" title="{{ i18n "hidden.email" }}"><i class="mdi mdi-email"></i></a>
+                <a href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/legal.html" target="_blank" rel="noopener" class="legal" title="{{ i18n "hidden.legal" }}"><i class="mdi mdi-gavel"></i></a>
                 <!--/sse-->
               </div>
             </div>
           </div>
-
-            <!--
-          <div class="col-lg-4 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-          -->
 
         </div>
       </div>
