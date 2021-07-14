@@ -6,6 +6,7 @@ defaultContentLanguage = "fr"
 enableRobotsTXT = true
 uglyURLs = true
 defaultContentLanguageInSubdir = true
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [languages]
   [languages.en]
