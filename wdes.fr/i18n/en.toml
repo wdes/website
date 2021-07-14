@@ -20,33 +20,33 @@ header = "Code LTS"
 content = """
 Code LTS is a project of the Wdes company that focuses on supporting old code
 and modernizing old code to continue the support.<br>
-You can find Code-LTS on <a href="https://github.com/code-lts">GitHub</a>.
+You can find Code-LTS on <a href="https://github.com/code-lts" target="_blank" rel="noopener">GitHub</a>.
 """
 
 [about.projects.sudo-bot]
 header = "Sudo-Bot"
 content = """
 The Sudo-Bot project focuses on bringing Docker images, deployment tools and <a href="https://github.com/features/actions" target="_blank" rel="noopener">GitHub actions</a> to developers.<br>
-You can find Sudo-Bot on <a href="https://github.com/sudo-bot">GitHub</a>.
+You can find Sudo-Bot on <a href="https://github.com/sudo-bot" target="_blank" rel="noopener">GitHub</a>.
 """
 
 [about.projects.air-balloon]
 header = "Air-Balloon"
 content = """
 This project will bring a dashboard for open-source maintainers and help with every day tasks.<br>
-You can find Air-Balloon on <a href="https://github.com/air-balloon">GitHub</a>.
+You can find Air-Balloon on <a href="https://github.com/air-balloon" target="_blank" rel="noopener">GitHub</a>.
 """
 
 [about.projects.wdes]
 header = "Wdes"
 content = """
-The Wdes namespace is where our tools and projects live on <a href="https://github.com/wdes">GitHub</a>.<br>
-You will find mostly PHP libraries and some NodeJS/Typescript tools, some Rust code is also written there.
+The Wdes namespace is where our tools and projects live on <a href="https://github.com/wdes" target="_blank" rel="noopener">GitHub</a>.<br>
+You will find mostly PHP libraries and some NodeJS/Typescript tools, some <a href="https://www.rust-lang.org/" target="_blank" rel="noopener">Rust</a> code is also written there.
 """
 
 [services]
 header = "Services"
-content = "We provide Web development services, code improvements, long term support as well as server configuration and setup."
+content = ""
 
 [services.dev]
 title = "Development services"

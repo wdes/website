@@ -12,39 +12,39 @@ services = "Services"
 header = "À propos de Wdes SAS"
 content = """
 Wdes SAS est une entreprise Française qui aime concevoir des outils libres et open-source.
-L'entreprise offre également des services payants à d'autres entreprises ou particuliers.
+L'entreprise offre également des services payants à destination des entreprises et des particuliers.
 """
 
 [about.projects.code-lts]
 content = """
-Code LTS est un projet de l'entreprise Wdes qui a pour but de maintenir et moderniser du vieux code pour prolonger son support.<br>
-Vous pouvez découvrir Code-LTS sur <a href="https://github.com/code-lts">GitHub</a>.
+Code LTS est un projet de l'entreprise Wdes dont l'objectif est de maintenir et moderniser du vieux code pour prolonger son support.<br>
+Vous pouvez découvrir Code-LTS sur <a href="https://github.com/code-lts" target="_blank" rel="noopener">GitHub</a>.
 """
 
 [about.projects.sudo-bot]
 header = "Sudo-Bot"
 content = """
 Le projet Sudo-Bot est orienté vers la conception d'images Docker, les outils de déploiement et proposer des <a href="https://github.com/features/actions" target="_blank" rel="noopener">actions GitHub</a> pour les développeurs.<br>
-Vous pouvez découvrir Sudo-Bot sur <a href="https://github.com/sudo-bot">GitHub</a>.
+Vous pouvez découvrir Sudo-Bot sur <a href="https://github.com/sudo-bot" target="_blank" rel="noopener">GitHub</a>.
 """
 
 [about.projects.air-balloon]
 header = "Air-Balloon"
 content = """
-Ce projet apportera un panneau de contrôle aux mainteneurs de projets open-source pour les accompagner dans leurs tâches du quotidien.<br>
-Vous pouvez découvrir Air-Balloon sur <a href="https://github.com/air-balloon">GitHub</a>.
+Le projet Air-Balloon apportera aux mainteneurs de projets open-source un panneau de contrôle pour les accompagner dans leurs tâches du quotidien.<br>
+Vous pouvez découvrir Air-Balloon sur <a href="https://github.com/air-balloon" target="_blank" rel="noopener">GitHub</a>.
 """
 
 [about.projects.wdes]
 header = "Wdes"
 content = """
-L'espace Wdes est l'endroit où nos outils et projets vivent sur <a href="https://github.com/wdes">GitHub</a>.<br>
-Vous y trouverez principalement des librairies PHP et des outils NodeJS/Typescript, ainsi que du code Rust.
+L'espace Wdes est l'endroit où nos outils et projets vivent sur <a href="https://github.com/wdes" target="_blank" rel="noopener">GitHub</a>.<br>
+Vous y trouverez principalement des librairies PHP et des outils NodeJS/Typescript, ainsi que du code <a href="https://www.rust-lang.org/fr" target="_blank" rel="noopener">Rust</a>.
 """
 
 [services]
 header = "Services"
-content = "Nous proposons des services de programmation, amélioration de code, support à long terme ainsi que le configuration de serveurs et leur mise en place."
+content = ""
 
 [services.dev]
 title = "Services de développement"
@@ -60,7 +60,7 @@ content = "Vous avez du vieux code ? Nous pouvons vous aider à le migrer ou/et 
 
 [services.infra]
 title = "Services d'infrastructure"
-content = "Nous pouvons vous mettre en place un serveur, un réseau ou changer de version votre système d'exploitation."
+content = "Nous pouvons mettre en place un serveur, un réseau selon vos besoins ou vous accompagner dans la mise à jour de vos systèmes d'exploitation."
 
 [contact]
 header = "Contact"
