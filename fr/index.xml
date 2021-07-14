@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wdes SAS - site web</title>
+    <link>https://wdes.fr/fr/</link>
+    <description>Recent content on Wdes SAS - site web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>2014-2021 William Desportes</copyright><atom:link href="https://wdes.fr/fr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://wdes.fr/fr/.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://wdes.fr/fr/.html</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
