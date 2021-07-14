@@ -26,7 +26,7 @@ You can find Code-LTS on <a href="https://github.com/code-lts">GitHub</a>.
 [about.projects.sudo-bot]
 header = "Sudo-Bot"
 content = """
-The Sudo-Bot project focuses on bringing Docker images, deployment tools and GitHub actions to developers.<br>
+The Sudo-Bot project focuses on bringing Docker images, deployment tools and <a href="https://github.com/features/actions" target="_blank" rel="noopener">GitHub actions</a> to developers.<br>
 You can find Sudo-Bot on <a href="https://github.com/sudo-bot">GitHub</a>.
 """
 

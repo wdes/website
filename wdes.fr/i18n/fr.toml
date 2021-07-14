@@ -24,7 +24,7 @@ Vous pouvez découvrir Code-LTS sur <a href="https://github.com/code-lts">GitHub
 [about.projects.sudo-bot]
 header = "Sudo-Bot"
 content = """
-Le projet Sudo-Bot est orienté vers la conception d'images Docker, les outils de déploiement et proposer des actions GitHub pour les développeurs.<br>
+Le projet Sudo-Bot est orienté vers la conception d'images Docker, les outils de déploiement et proposer des <a href="https://github.com/features/actions" target="_blank" rel="noopener">actions GitHub</a> pour les développeurs.<br>
 Vous pouvez découvrir Sudo-Bot sur <a href="https://github.com/sudo-bot">GitHub</a>.
 """
 
@@ -38,7 +38,7 @@ Vous pouvez découvrir Air-Balloon sur <a href="https://github.com/air-balloon">
 [about.projects.wdes]
 header = "Wdes"
 content = """
-L'espace Wdes est l'endroit où nos outils et projets vivent, sur <a href="https://github.com/wdes">GitHub</a>.<br>
+L'espace Wdes est l'endroit où nos outils et projets vivent sur <a href="https://github.com/wdes">GitHub</a>.<br>
 Vous y trouverez principalement des librairies PHP et des outils NodeJS/Typescript, ainsi que du code Rust.
 """
 
@@ -47,8 +47,8 @@ header = "Services"
 content = "Nous proposons des services de programmation, amélioration de code, support à long terme ainsi que le configuration de serveurs et leur mise en place."
 
 [services.dev]
-title = "Development services"
-content = "If you have PHP/html code or Angular code we can work on it."
+title = "Services de développement"
+content = "Si vous avez du code PHP/html ou un site Angular nous savons nous en occuper."
 
 [services.code-improvement]
 title = "Améliorations de code"
