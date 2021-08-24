@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Lang }}">
 
 <head>
     <meta charset="utf-8">
@@ -95,7 +95,22 @@
         | minify
         | fingerprint "sha512" }}
     <link href="{{ $fontMizzStyle.Permalink }}" rel="stylesheet" integrity="{{ $fontMizzStyle.Data.Integrity }}" crossorigin="anonymous">
-
+    <!-- Matomo -->
+    <script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//analytics.datacenters.network/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '2']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+    </script>
+    <noscript><p><img src="//analytics.datacenters.network/matomo.php?idsite=2&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+    <!-- End Matomo Code -->
   <!-- =======================================================
   * Template Name: Squadfree - v4.0.1
   * Template URL: https://bootstrapmade.com/squadfree-free-bootstrap-template-creative/
