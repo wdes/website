@@ -1,7 +1,7 @@
 
 CONTAINER_USER="$(shell id -u):$(shell id -g)"
 
-IMAGE="klakegg/hugo:0.86.0-ext-alpine"
+IMAGE="klakegg/hugo:0.87.0-ext-alpine"
 
 CONTAINER_NAME="wdes.fr"
 PROJECT_NAME="wdes.fr"
