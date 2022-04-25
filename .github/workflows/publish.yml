@@ -18,8 +18,8 @@ jobs:
                   fetch-depth: 0
                   ssh-key: ${{ secrets.SSH_KEY_DEPLOY }}
             - name: Import GPG key
-              # v4 - 8c43807e82148a7bafc633cc9584d04bf54be8d0
-              uses: crazy-max/ghaction-import-gpg@8c43807e82148a7bafc633cc9584d04bf54be8d0
+              # v4.3.0 - 4d58d49bfefed583addec96996588e8bc4b306b8
+              uses: crazy-max/ghaction-import-gpg@4d58d49bfefed583addec96996588e8bc4b306b8
               with:
                   gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
                   passphrase: ${{ secrets.GPG_PASSPHRASE }}
