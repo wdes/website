@@ -12,7 +12,8 @@ services = "Services"
 header = "À propos de Wdes SAS"
 content = """
 Wdes SAS est une entreprise Française qui aime concevoir des outils libres et open-source.
-L'entreprise offre également des services payants à destination des entreprises et des particuliers.
+L'entreprise offre également des services payants à destination des entreprises et des particuliers.<br>
+Wdes ® est une marque déposée à l'<a href="https://data.inpi.fr/marques/FR4828955?q=Wdes#FR4828955"target="_blank" rel="noopener">INPI</a>.
 """
 
 [about.projects.code-lts]

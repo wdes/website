@@ -12,7 +12,8 @@ services = "Services"
 header = "About Wdes SAS"
 content = """
 Wdes SAS is a French company that focuses on building free and open-source tools.
-It also provides paid services to organizations.
+It also provides paid services to organizations.<br>
+Wdes ® is a registered brand on <a href="https://data.inpi.fr/marques/FR4828955?q=Wdes#FR4828955"target="_blank" rel="noopener">INPI</a>.
 """
 
 [about.projects.code-lts]
