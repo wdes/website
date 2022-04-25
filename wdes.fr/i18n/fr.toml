@@ -72,6 +72,7 @@ motd = "Apporter une expertise à votre entreprise"
 email = "Email : "
 address = "Gourin (56110), Bretagne, France"
 legal-number = "SIRET : "
+legal-intracom-number = "TVA : "
 
 [numbers]
 domains = "Domaines"

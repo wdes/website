@@ -20,11 +20,13 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
   legalNumber = "82956288300019"
+  legalVatNumber = "FR 13829562883"
   [params.links]
     github = "https://github.com/wdes"
     gitlab = "https://gitlab.com/wdes"
     twitter = "https://twitter.com/wdesfr"
     linkedin = "https://www.linkedin.com/company/wdes/"
     societeCom = "https://www.societe.com/societe/wdes-sas-829562883.html"
+    europaVies = "https://ec.europa.eu/taxation_customs/vies/"
     mailto = "mailto:contact@wdes.eu"
     email = "contact@wdes.eu"

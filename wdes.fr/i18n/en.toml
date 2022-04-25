@@ -74,6 +74,7 @@ motd = "Bring our expertise into your business"
 email = "Email: "
 address = "Gourin (56110), Britany, France"
 legal-number = "SIRET: "
+legal-intracom-number = "VAT : "
 
 [numbers]
 domains = "Domains"
