@@ -74,6 +74,7 @@ email = "Email : "
 address = "Gourin (56110), Bretagne, France"
 legal-number = "SIRET : "
 legal-intracom-number = "TVA : "
+legal-EORI-number = "EORI : "
 
 [numbers]
 domains = "Domaines"
