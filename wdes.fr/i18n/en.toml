@@ -77,6 +77,7 @@ address = "Gourin (56110), Britany, France"
 legal-number = "SIRET: "
 legal-intracom-number = "VAT : "
 legal-EORI-number = "EORI : "
+legal-DUNS-number = "D-U-N-S : "
 
 [numbers]
 domains = "Domains"

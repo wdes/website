@@ -22,6 +22,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
   legalNumber = "82956288300019"
   legalVatNumber = "FR 13829562883"
   douaneEORI = "FR82956288300019"
+  altaresDUNS = "269610966"
   [params.links]
     github = "https://github.com/wdes"
     gitlab = "https://gitlab.com/wdes"
@@ -29,6 +30,7 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
     linkedin = "https://www.linkedin.com/company/wdes/"
     companyOfficialRegistryUrl = "https://annuaire-entreprises.data.gouv.fr/etablissement/82956288300019"
     europaVies = "https://ec.europa.eu/taxation_customs/vies/"
+    altaresDUNS = "https://order.altares.nl/en/checkout"
     douaneEORI = "https://www.douane.gouv.fr/eori"
     mailto = "mailto:contact@wdes.eu"
     email = "contact@wdes.eu"
