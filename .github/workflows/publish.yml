@@ -37,6 +37,7 @@ jobs:
                   mv "${TEMP_DIR}"/public/* ./
                   rm -rf "${TEMP_DIR}"
                   echo 'wdes.fr' > CNAME
+                  touch .nojekyll
                   git add -A
                   git commit --allow-empty -m "Content update ($(date --utc))"
                   git push
