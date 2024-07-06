@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Wdes SAS - Politique de confidentialité pour les applications">
+    <meta name="author" content="William Desportes">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Wdes SAS - Politique de confidentialité - Applications</title>
+    <!-- Favicons -->
+    <link href="{{ .Site.BaseURL }}assets/logo/wdes_48x48.png" rel="icon">
+    <link href="{{ .Site.BaseURL }}assets/logo/wdes_96x96.png" rel="apple-touch-icon">
+    <link href="{{ .Site.BaseURL }}favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <!-- Vendor CSS Files -->
+    {{ $options := (dict "targetPath" "assets/vendor/bootstrap/css/bootstrap.css" "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $bootstrapStyle := resources.Get "vendor/bootstrap/scss/bootstrap.scss"
+        | resources.ExecuteAsTemplate "vendor/bootstrap/scss/bootstrap.scss" .
+        | resources.ToCSS $options
+        | minify
+        | fingerprint "sha512" }}
+    <link href="{{ $bootstrapStyle.Permalink }}" rel="stylesheet" integrity="{{ $bootstrapStyle.Data.Integrity }}" crossorigin="anonymous">
+    <link rel="preload" href="{{ $bootstrapStyle.Permalink }}" as="style" integrity="{{ $bootstrapStyle.Data.Integrity }}" crossorigin="anonymous">
+</head>
+
+<body>
+    <main role="main" class="container">
+        <h1 class="mt-5">Politique de confidentialité - Applications</h1>
+        <div class="card mt-5">
+            <div class="card-header">Informations collectés par Wdes</div>
+            <div class="card-body">
+                <p>C'est très simple, il n'y a pas de collecte d'informations sur les applications suivantes</p>
+                <ul>
+                    <li>WdesAutoConnect (fr.wdes.autoconnect)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card mt-5">
+            <div class="card-header">Informations collectés par des tiers</div>
+            <div class="card-body">
+                <p>Sur les applications suivantes, il est possible que votre adresse IP soit collectés par des tiers</p>
+                <ul>
+                    <li>WdesAutoConnect (fr.wdes.autoconnect): Utilisation d'URLs tiers pour tester le code 204.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card mt-5">
+            <div class="card-header">Changements dans la politique</div>
+            <div class="card-body">
+                <p>Les utilisateurs en seront toujours informés</p>
+            </div>
+        </div>
+        <div class="card mt-5 mb-5">
+            <div class="card-header">Sécurité et Contact</div>
+            <div class="card-body">
+                <!--sse-->
+                <p>William Desportes</p>
+                <p>Email de contact :
+                    <a href="mailto:williamdes@wdes.fr">williamdes@wdes.fr</a>
+                </p>
+                <!--/sse-->
+            </div>
+            <div class="card-footer">
+                <a href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/">retour à l'accueil</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
