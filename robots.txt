@@ -1,5 +1,1 @@
 User-agent: *
-Disallow: /assets/*
-Disallow: /vendor/*
-User-agent: ia_archiver
-Disallow: /
