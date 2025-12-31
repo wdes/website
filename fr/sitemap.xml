@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wdes.fr/fr/</loc>
+    <loc>https://wdes.fr/fr/index.html</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wdes.fr/en/"
+                href="https://wdes.fr/en/index.html"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://wdes.fr/fr/"
+                href="https://wdes.fr/fr/index.html"
                 />
   </url><url>
     <loc>https://wdes.fr/fr/app-privacy-policy.html</loc>

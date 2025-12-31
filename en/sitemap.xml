@@ -14,16 +14,16 @@
                 href="https://wdes.fr/en/legal.html"
                 />
   </url><url>
-    <loc>https://wdes.fr/en/</loc>
+    <loc>https://wdes.fr/en/index.html</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://wdes.fr/fr/"
+                href="https://wdes.fr/fr/index.html"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wdes.fr/en/"
+                href="https://wdes.fr/en/index.html"
                 />
   </url>
 </urlset>
