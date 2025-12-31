@@ -56,7 +56,7 @@
     {{ $options := (dict "targetPath" "assets/vendor/bootstrap/css/bootstrap.css" "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $bootstrapStyle := resources.Get "vendor/bootstrap/scss/bootstrap.scss"
         | resources.ExecuteAsTemplate "vendor/bootstrap/scss/bootstrap.scss" .
-        | resources.ToCSS $options
+        | resources.css.Sass $options
         | minify
         | fingerprint "sha512" }}
     <link href="{{ $bootstrapStyle.Permalink }}" rel="stylesheet" integrity="{{ $bootstrapStyle.Data.Integrity }}" crossorigin="anonymous">
@@ -64,7 +64,7 @@
     {{ $options := (dict "targetPath" "assets/vendor/aos/aos.css" "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $aosStyle := resources.Get "vendor/aos/sass/aos.scss"
         | resources.ExecuteAsTemplate "vendor/aos/sass/aos.scss" .
-        | resources.ToCSS $options
+        | resources.css.Sass $options
         | minify
         | fingerprint "sha512" }}
     <link href="{{ $aosStyle.Permalink }}" rel="stylesheet" integrity="{{ $aosStyle.Data.Integrity }}" crossorigin="anonymous">
@@ -74,7 +74,7 @@
     {{ $options := (dict "targetPath" "assets/css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $mainStyle := resources.Get "css/style.scss"
         | resources.ExecuteAsTemplate "css/style.scss" .
-        | resources.ToCSS $options
+        | resources.css.Sass $options
         | minify
         | fingerprint "sha512" }}
     <link href="{{ $mainStyle.Permalink }}" rel="stylesheet" integrity="{{ $mainStyle.Data.Integrity }}" crossorigin="anonymous">
@@ -83,7 +83,7 @@
     {{ $options := (dict "targetPath" "assets/vendor/MaterialDesignIcons/css/materialdesignicons.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $mdiStyle := resources.Get "vendor/MaterialDesignIcons/scss/materialdesignicons.scss"
         | resources.ExecuteAsTemplate "vendor/MaterialDesignIcons/scss/materialdesignicons.scss" .
-        | resources.ToCSS $options
+        | resources.css.Sass $options
         | minify
         | fingerprint "sha512" }}
     <link href="{{ $mdiStyle.Permalink }}" rel="stylesheet" integrity="{{ $mdiStyle.Data.Integrity }}" crossorigin="anonymous">
@@ -91,7 +91,7 @@
     {{ $options := (dict "targetPath" "assets/vendor/font-mfizz/css/font-mfizz.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $fontMizzStyle := resources.Get "vendor/font-mfizz/font-mfizz.scss"
         | resources.ExecuteAsTemplate "vendor/font-mfizz/font-mfizz.scss" .
-        | resources.ToCSS $options
+        | resources.css.Sass $options
         | minify
         | fingerprint "sha512" }}
     <link href="{{ $fontMizzStyle.Permalink }}" rel="stylesheet" integrity="{{ $fontMizzStyle.Data.Integrity }}" crossorigin="anonymous">
