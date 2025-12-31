@@ -17,7 +17,7 @@
     {{ $options := (dict "targetPath" "assets/vendor/bootstrap/css/bootstrap.css" "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $bootstrapStyle := resources.Get "vendor/bootstrap/scss/bootstrap.scss"
         | resources.ExecuteAsTemplate "vendor/bootstrap/scss/bootstrap.scss" .
-        | resources.css.Sass $options
+        | css.Sass $options
         | minify
         | fingerprint "sha512" }}
     <link href="{{ $bootstrapStyle.Permalink }}" rel="stylesheet" integrity="{{ $bootstrapStyle.Data.Integrity }}" crossorigin="anonymous">
