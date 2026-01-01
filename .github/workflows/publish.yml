@@ -36,6 +36,7 @@ jobs:
                   set -o xtrace
                   make fix-perms
                   make build
+                  sudo make fix-perms
                   TEMP_DIR="$(mktemp -d --suffix=_website_wdes)"
                   cp -rp wdes.fr/public "${TEMP_DIR}"
                   git checkout gh-pages
