@@ -11,11 +11,9 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 [languages]
   [languages.en]
     title = "Wdes SAS website"
-    description = "Wdes SAS website"
     weight = 1
   [languages.fr]
     title = "Wdes SAS - site web"
-    description = "Site web de Wdes SAS"
     weight = 2
 
 [params]
