@@ -34,6 +34,7 @@ jobs:
             - name: Build and push
               run: |
                   set -o xtrace
+                  make fix-perms
                   make build
                   TEMP_DIR="$(mktemp -d --suffix=_website_wdes)"
                   cp -rp wdes.fr/public "${TEMP_DIR}"
