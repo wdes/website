@@ -1,4 +1,7 @@
-name: Publish to GitHub pages
+name: Publish to git (static pages)
+
+permissions:
+    contents: none
 
 on:
     push:
@@ -13,13 +16,16 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
               with:
-                  fetch-depth: 0
-                  ssh-key: ${{ secrets.SSH_KEY_DEPLOY }}
+                # Fetch all branches to have gh-pages too
+                fetch-depth: 0
+                ssh-key: ${{ secrets.SSH_KEY_DEPLOY }}
+                # Already the default value, but so you understand the push command will have creds
+                persist-credentials: true
             - name: Import GPG key
-              # v5.2.0 - 111c56156bcc6918c056dbef52164cfa583dc549
-              uses: crazy-max/ghaction-import-gpg@111c56156bcc6918c056dbef52164cfa583dc549
+              # v6.1.0 - 01dd5d3ca463c7f10f7f4f7b4f177225ac661ee4
+              uses: crazy-max/ghaction-import-gpg@01dd5d3ca463c7f10f7f4f7b4f177225ac661ee4
               with:
                   gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
                   passphrase: ${{ secrets.GPG_PASSPHRASE }}
@@ -29,10 +35,10 @@ jobs:
               run: |
                   set -o xtrace
                   make build
-                  TEMP_DIR="$(mktemp -d --suffix=_website_williamdes)"
+                  TEMP_DIR="$(mktemp -d --suffix=_website_wdes)"
                   cp -rp wdes.fr/public "${TEMP_DIR}"
                   git checkout gh-pages
-                  git ls-files | xargs -r -n 1 rm
+                  git ls-files | xargs -r -n 1 rm -vf
                   rm -rfd ./*
                   mv "${TEMP_DIR}"/public/* ./
                   rm -rf "${TEMP_DIR}"
