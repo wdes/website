@@ -4,7 +4,6 @@ title = "Wdes SAS's website"
 copyright = "2014-2026 William Desportes"
 defaultContentLanguage = "fr"
 enableRobotsTXT = true
-uglyURLs = true
 defaultContentLanguageInSubdir = true
 disableKinds = ["taxonomy", "taxonomyTerm"]
 

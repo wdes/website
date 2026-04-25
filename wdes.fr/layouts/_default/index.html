@@ -126,7 +126,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1 class="text-light"><a href="index.html"><span>Wdes</span></a></h1>
+        <h1 class="text-light"><a href="{{ "/" | relLangURL }}"><span>Wdes</span></a></h1>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -320,7 +320,7 @@
                 <a href="{{ .Site.Params.links.github }}" target="_blank" rel="noopener" class="gitlab" title="{{ i18n "hidden.gitlab" }}"><i class="mdi mdi-gitlab"></i></a>
                 <a href="{{ .Site.Params.links.linkedin }}" target="_blank" rel="noopener" class="linkedin" title="{{ i18n "hidden.linkedin" }}"><i class="mdi mdi-linkedin"></i></a>
                 <a href="{{ .Site.Params.links.mailto }}" target="_blank" rel="noopener" class="email" title="{{ i18n "hidden.email" }}"><i class="mdi mdi-email"></i></a>
-                <a href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/legal.html" target="_blank" rel="noopener" class="legal" title="{{ i18n "hidden.legal" }}"><i class="mdi mdi-gavel"></i></a>
+                <a href="{{ "/legal/" | relLangURL }}" target="_blank" rel="noopener" class="legal" title="{{ i18n "hidden.legal" }}"><i class="mdi mdi-gavel"></i></a>
                 <!--/sse-->
               </div>
             </div>
