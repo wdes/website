@@ -5,7 +5,7 @@
     <loc>https://wdes.fr/en/legal.html</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
+                hreflang="en"
                 href="https://wdes.fr/fr/legal.html"
                 />
     <xhtml:link
@@ -17,7 +17,7 @@
     <loc>https://wdes.fr/en/index.html</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
+                hreflang="en"
                 href="https://wdes.fr/fr/index.html"
                 />
     <xhtml:link
