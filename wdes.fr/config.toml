@@ -1,5 +1,4 @@
 baseURL = "https://wdes.fr/"
-languageCode = "en"
 title = "Wdes SAS's website"
 copyright = "2014-2026 William Desportes"
 defaultContentLanguage = "fr"
@@ -10,10 +9,14 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 [languages]
   [languages.en]
     title = "Wdes SAS website"
-    weight = 1
+    weight = 2
+    languageCode = "en"
+    languageName = "English"
   [languages.fr]
     title = "Wdes SAS - site web"
-    weight = 2
+    weight = 1
+    languageCode = "fr"
+    languageName = "Français"
 
 [params]
   legalNumber = "82956288300027"
