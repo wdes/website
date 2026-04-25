@@ -66,7 +66,10 @@ Guidance for AI coding agents working in this repository.
 
 ## Build & run
 
-All commands run via Docker (the Hugo binary is pinned in `Makefile`):
+**Always use `make` — never call `docker run` directly.** The Hugo version is
+pinned in the `Makefile` and all volume mounts / port bindings are configured
+there. Running Docker by hand risks using the wrong image, wrong working
+directory, or wrong flags.
 
 ```sh
 make serve          # hugo serve on http://localhost:8111  (binds 0.0.0.0)
@@ -106,8 +109,9 @@ The CI workflow runs `make build`, then copies `wdes.fr/public/*` onto the
 
 - Don't commit `wdes.fr/public/` (gitignored). The `gh-pages` branch is
   managed by CI; never push to it manually.
-- Don't bypass the `Makefile` to run a different Hugo version — output diffs
-  silently between versions.
+- **Never run `docker run` directly** — always use `make build`, `make serve`,
+  etc. The Makefile pins the correct Hugo image, volume mounts, and flags.
+  Running Docker by hand risks version mismatches and wrong build output.
 - Don't use `--no-verify` or skip the GPG signing on `gh-pages` (CI does it
   with secrets; local devs should not push there).
 - Don't reintroduce `uglyURLs = true` (see "Known traps").

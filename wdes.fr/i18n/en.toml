@@ -1,90 +1,91 @@
 [index-page]
-desc = "Wdes SAS website"
+desc = "Wdes SAS — Open-source engineering, infrastructure, and AI consulting based in France."
 
 [head]
 title = "Welcome to Wdes SAS"
-motd = "We design excellent software that you dream about"
+motd = "Open-source software, infrastructure, and AI — built with care"
 
 [menu]
 home = "Home"
-about = "About Us"
+about = "About"
+projects = "Projects"
 services = "Services"
 
 [about]
 header = "About Wdes SAS"
 content = """
-Wdes SAS is a French company that focuses on building free and open-source tools.
-It also provides paid services to organizations.<br>
-Wdes ® is a registered brand on <a href="https://data.inpi.fr/marques/FR4828955?q=Wdes#FR4828955"target="_blank" rel="noopener">INPI</a>.
+Wdes SAS is a French company specialising in open-source software, infrastructure engineering, and AI consulting.
+We build tools in <strong>Rust</strong>, <strong>PHP</strong>, and <strong>TypeScript</strong> used by thousands of developers worldwide.<br>
+Wdes ® is a registered trademark on <a href="https://data.inpi.fr/marques/FR4828955?q=Wdes#FR4828955" target="_blank" rel="noopener">INPI</a>.
 """
 
 [about.projects.code-lts]
 header = "Code LTS"
 content = """
-Code LTS is a project of the Wdes company that focuses on supporting old code
-and modernizing old code to continue the support.<br>
-You can find Code-LTS on <a href="https://github.com/code-lts" target="_blank" rel="noopener">GitHub</a>.
+Maintain and modernise legacy code so it keeps running safely.
+Projects like <strong>Doctum</strong> (350+ ★) and the <strong>jQuery Fullscreen Plugin</strong> (330+ ★) are used across the ecosystem.<br>
+<a href="https://github.com/code-lts" target="_blank" rel="noopener">GitHub</a>
 """
 
 [about.projects.sudo-bot]
 header = "Sudo-Bot"
 content = """
-The Sudo-Bot project focuses on bringing Docker images, deployment tools and <a href="https://github.com/features/actions" target="_blank" rel="noopener">GitHub actions</a> to developers.<br>
-You can find Sudo-Bot on <a href="https://github.com/sudo-bot" target="_blank" rel="noopener">GitHub</a>.
+A suite of <strong>GitHub Actions</strong> and Docker images for CI/CD: PR merge, fork sync, Docker signing, Scrutinizer coverage, and more.<br>
+<a href="https://github.com/sudo-bot" target="_blank" rel="noopener">GitHub</a>
 """
 
-[about.projects.air-balloon]
-header = "Air-Balloon"
+[about.projects.mail]
+header = "Mail Autodiscover"
 content = """
-This project will bring a dashboard for open-source maintainers and help with every day tasks.<br>
-You can find Air-Balloon on <a href="https://github.com/air-balloon" target="_blank" rel="noopener">GitHub</a>.
+A Rust-powered Docker image for dynamic <strong>Autodiscover &amp; Autoconfig</strong> — supports Outlook, Thunderbird, Apple, and Android.<br>
+<a href="https://github.com/wdes/mail-autodiscover-autoconfig" target="_blank" rel="noopener">GitHub</a> (25+ ★)
 """
 
 [about.projects.wdes]
 header = "Wdes"
 content = """
-The Wdes namespace is where our tools and projects live on <a href="https://github.com/wdes" target="_blank" rel="noopener">GitHub</a>.<br>
-You will find mostly PHP libraries and some NodeJS/Typescript tools, some <a href="https://www.rust-lang.org/" target="_blank" rel="noopener">Rust</a> code is also written there.
+Our home for tools and libraries in PHP, TypeScript, and <a href="https://www.rust-lang.org/" target="_blank" rel="noopener">Rust</a>: DNS tooling, security auditing, infrastructure monitoring, and more.<br>
+<a href="https://github.com/wdes" target="_blank" rel="noopener">GitHub</a>
 """
 
 [services]
 header = "Services"
-content = ""
+content = "What we can do for your business"
+
+[services.ai]
+title = "AI Consulting"
+content = "We help companies adopt AI effectively — from integrating LLMs into your workflows to improving the quality of AI-generated output through better prompting, fine-tuning, and review processes."
 
 [services.dev]
-title = "Development services"
-content = "If you have PHP/html code or Angular code we can work on it."
-
-[services.code-improvement]
-title = "Code improvements"
-content = "We are able to improve your Web code and make your performance improve !"
+title = "Software Development"
+content = "Full-stack development in PHP, Rust, TypeScript, and Angular. We build robust, maintainable software for web and backend systems."
 
 [services.lts]
-title = "Long term support"
-content = "You have old code ? We can help you migrate or provide support for it."
+title = "Long-Term Support"
+content = "Legacy code holding you back? We migrate, modernise, and maintain aging codebases so you can move forward without starting over."
 
 [services.infra]
-title = "Infrastructure services"
-content = "We can setup a server or a network for you, or help you migrate your OS."
+title = "Infrastructure"
+content = "Server setup, network architecture, OS migrations, mail infrastructure, monitoring, and containerised deployments with Docker."
 
 [contact]
 header = "Contact"
-content = "Send us an email to <a href=\"%s\">%s</a>, we will be happy to help you."
+content = "Send us an email at <a href=\"%s\">%s</a> — we will be happy to hear from you."
 
 [footer]
 designed_by = "Theme designed by"
-motd = "Bring our expertise into your business"
+motd = "Engineering expertise for your business"
 email = "Email: "
-address = "Gourin (56110), Britany, France"
+address = "Gourin (56110), Brittany, France"
 legal-number = "SIRET: "
-legal-intracom-number = "VAT : "
-legal-EORI-number = "EORI : "
-legal-DUNS-number = "D-U-N-S : "
+legal-intracom-number = "VAT: "
+legal-EORI-number = "EORI: "
+legal-DUNS-number = "D-U-N-S: "
 
 [numbers]
-domains = "Domains"
+stars = "GitHub Stars"
 orgs = "Organizations"
-composer = "Composer packages"
+actions = "GitHub Actions"
 repos = "Repositories"
 
 [hidden]
@@ -94,4 +95,4 @@ github = "GitHub"
 gitlab = "GitLab"
 linkedin = "LinkedIn"
 email = "E-Mail"
-legal = "Legal informations"
+legal = "Legal information"

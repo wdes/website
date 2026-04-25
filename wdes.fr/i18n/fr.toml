@@ -1,77 +1,80 @@
 [index-page]
-desc = "Site web de Wdes SAS"
+desc = "Wdes SAS — Ingénierie open-source, infrastructure et conseil en IA, basée en France."
 
 [head]
 title = "Bienvenue chez Wdes SAS"
-motd = "Nous concevons les programmes dont vous rêvez"
+motd = "Logiciel open-source, infrastructure et IA — conçus avec soin"
 
 [menu]
 home = "Accueil"
 about = "À propos"
+projects = "Projets"
 services = "Services"
 
 [about]
 header = "À propos de Wdes SAS"
 content = """
-Wdes SAS est une entreprise Française qui aime concevoir des outils libres et open-source.
-L'entreprise offre également des services payants à destination des entreprises et des particuliers.<br>
-Wdes ® est une marque déposée à l'<a href="https://data.inpi.fr/marques/FR4828955?q=Wdes#FR4828955"target="_blank" rel="noopener">INPI</a>.
+Wdes SAS est une entreprise française spécialisée dans le logiciel open-source, l'ingénierie d'infrastructure et le conseil en IA.
+Nous développons des outils en <strong>Rust</strong>, <strong>PHP</strong> et <strong>TypeScript</strong> utilisés par des milliers de développeurs dans le monde.<br>
+Wdes ® est une marque déposée à l'<a href="https://data.inpi.fr/marques/FR4828955?q=Wdes#FR4828955" target="_blank" rel="noopener">INPI</a>.
 """
 
 [about.projects.code-lts]
+header = "Code LTS"
 content = """
-Code LTS est un projet de l'entreprise Wdes dont l'objectif est de maintenir et moderniser du vieux code pour prolonger son support.<br>
-Vous pouvez découvrir Code-LTS sur <a href="https://github.com/code-lts" target="_blank" rel="noopener">GitHub</a>.
+Maintenir et moderniser du code legacy pour qu'il continue à fonctionner en toute sécurité.
+Des projets comme <strong>Doctum</strong> (350+ ★) et le <strong>jQuery Fullscreen Plugin</strong> (330+ ★) sont largement utilisés.<br>
+<a href="https://github.com/code-lts" target="_blank" rel="noopener">GitHub</a>
 """
 
 [about.projects.sudo-bot]
 header = "Sudo-Bot"
 content = """
-Le projet Sudo-Bot est orienté vers la conception d'images Docker, les outils de déploiement et proposer des <a href="https://github.com/features/actions" target="_blank" rel="noopener">actions GitHub</a> pour les développeurs.<br>
-Vous pouvez découvrir Sudo-Bot sur <a href="https://github.com/sudo-bot" target="_blank" rel="noopener">GitHub</a>.
+Une suite d'<strong>Actions GitHub</strong> et d'images Docker pour le CI/CD : merge de PR, synchronisation de forks, signature Docker, couverture Scrutinizer, et bien plus.<br>
+<a href="https://github.com/sudo-bot" target="_blank" rel="noopener">GitHub</a>
 """
 
-[about.projects.air-balloon]
-header = "Air-Balloon"
+[about.projects.mail]
+header = "Mail Autodiscover"
 content = """
-Le projet Air-Balloon apportera aux mainteneurs de projets open-source un panneau de contrôle pour les accompagner dans leurs tâches du quotidien.<br>
-Vous pouvez découvrir Air-Balloon sur <a href="https://github.com/air-balloon" target="_blank" rel="noopener">GitHub</a>.
+Une image Docker en Rust pour la configuration dynamique <strong>Autodiscover &amp; Autoconfig</strong> — compatible Outlook, Thunderbird, Apple et Android.<br>
+<a href="https://github.com/wdes/mail-autodiscover-autoconfig" target="_blank" rel="noopener">GitHub</a> (25+ ★)
 """
 
 [about.projects.wdes]
 header = "Wdes"
 content = """
-L'espace Wdes est l'endroit où nos outils et projets vivent sur <a href="https://github.com/wdes" target="_blank" rel="noopener">GitHub</a>.<br>
-Vous y trouverez principalement des librairies PHP et des outils NodeJS/Typescript, ainsi que du code <a href="https://www.rust-lang.org/fr" target="_blank" rel="noopener">Rust</a>.
+Notre espace pour les outils et bibliothèques en PHP, TypeScript et <a href="https://www.rust-lang.org/fr" target="_blank" rel="noopener">Rust</a> : outillage DNS, audit de sécurité, supervision d'infrastructure, et plus.<br>
+<a href="https://github.com/wdes" target="_blank" rel="noopener">GitHub</a>
 """
 
 [services]
 header = "Services"
-content = ""
+content = "Ce que nous pouvons faire pour votre entreprise"
+
+[services.ai]
+title = "Conseil en IA"
+content = "Nous aidons les entreprises à adopter l'IA efficacement — de l'intégration de LLMs dans vos processus à l'amélioration de la qualité des résultats produits par l'IA grâce au prompting, au fine-tuning et à la revue."
 
 [services.dev]
-title = "Services de développement"
-content = "Si vous avez du code PHP/html ou un site Angular nous savons nous en occuper."
-
-[services.code-improvement]
-title = "Améliorations de code"
-content = "Nous sommes capable d'améliorer votre code et vous faire gagner en performance !"
+title = "Développement logiciel"
+content = "Développement full-stack en PHP, Rust, TypeScript et Angular. Nous concevons des logiciels robustes et maintenables pour le web et le backend."
 
 [services.lts]
 title = "Support à long terme"
-content = "Vous avez du vieux code ? Nous pouvons vous aider à le migrer ou/et à le maintenir."
+content = "Du code legacy vous freine ? Nous migrons, modernisons et maintenons les bases de code vieillissantes pour que vous puissiez avancer sans tout repartir de zéro."
 
 [services.infra]
-title = "Services d'infrastructure"
-content = "Nous pouvons mettre en place un serveur, un réseau selon vos besoins ou vous accompagner dans la mise à jour de vos systèmes d'exploitation."
+title = "Infrastructure"
+content = "Mise en place de serveurs, architecture réseau, migrations d'OS, infrastructure mail, supervision et déploiements conteneurisés avec Docker."
 
 [contact]
 header = "Contact"
-content = "Envoyez nous un e-mail à <a href=\"%s\">%s</a>, nous seront heureux de vous répondre."
+content = "Envoyez-nous un e-mail à <a href=\"%s\">%s</a>, nous serons heureux de vous répondre."
 
 [footer]
 designed_by = "Thème conçu par"
-motd = "Apporter une expertise à votre entreprise"
+motd = "Une expertise d'ingénierie pour votre entreprise"
 email = "Email : "
 address = "Gourin (56110), Bretagne, France"
 legal-number = "SIRET : "
@@ -80,9 +83,9 @@ legal-EORI-number = "EORI : "
 legal-DUNS-number = "D-U-N-S : "
 
 [numbers]
-domains = "Domaines"
+stars = "Étoiles GitHub"
 orgs = "Organisations"
-composer = "Paquets composer"
+actions = "Actions GitHub"
 repos = "Dépôts"
 
 [hidden]

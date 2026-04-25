@@ -78,7 +78,7 @@
         | minify
         | fingerprint "sha512" }}
     <link href="{{ $mainStyle.Permalink }}" rel="stylesheet" integrity="{{ $mainStyle.Data.Integrity }}" crossorigin="anonymous">
-    <link rel="preload" href="{{ $mainStyle.Permalink }}" as="style"integrity="{{ $mainStyle.Data.Integrity }}" crossorigin="anonymous">
+    <link rel="preload" href="{{ $mainStyle.Permalink }}" as="style" integrity="{{ $mainStyle.Data.Integrity }}" crossorigin="anonymous">
 
     {{ $options := (dict "targetPath" "assets/vendor/MaterialDesignIcons/css/materialdesignicons.min.css" "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $mdiStyle := resources.Get "vendor/MaterialDesignIcons/scss/materialdesignicons.scss"
@@ -133,6 +133,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">{{ i18n "menu.home" }}</a></li>
           <li><a class="nav-link scrollto" href="#about">{{ i18n "menu.about" }}</a></li>
+          <li><a class="nav-link scrollto" href="#projects">{{ i18n "menu.projects" }}</a></li>
           <li><a class="nav-link scrollto" href="#services">{{ i18n "menu.services" }}</a></li>
         </ul>
         <i class="mdi mdi-list mobile-nav-toggle"></i>
@@ -167,22 +168,22 @@
             <div class="icon-boxes d-flex flex-column justify-content-center">
               <div class="row">
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-receipt"></i>
+                  <i class="mdi mdi-code-tags"></i>
                   <h4>{{ i18n "about.projects.code-lts.header" }}</h4>
                   <p>{{ i18n "about.projects.code-lts.content" | safeHTML }}</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <i class="bx bx-cube-alt"></i>
+                  <i class="mdi mdi-robot"></i>
                   <h4>{{ i18n "about.projects.sudo-bot.header" }}</h4>
                   <p>{{ i18n "about.projects.sudo-bot.content" | safeHTML }}</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bx bx-images"></i>
-                  <h4>{{ i18n "about.projects.air-balloon.header" }}</h4>
-                  <p>{{ i18n "about.projects.air-balloon.content" | safeHTML }}</p>
+                  <i class="mdi mdi-email-check"></i>
+                  <h4>{{ i18n "about.projects.mail.header" }}</h4>
+                  <p>{{ i18n "about.projects.mail.content" | safeHTML }}</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bx bx-shield"></i>
+                  <i class="mdi mdi-shield-check"></i>
                   <h4>{{ i18n "about.projects.wdes.header" }}</h4>
                   <p>{{ i18n "about.projects.wdes.content" | safeHTML }}</p>
                 </div>
@@ -206,20 +207,23 @@
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up">
+              <div class="icon"><i class="mdi mdi-head-lightbulb-outline"></i></div>
+              <h4 class="title"><a href="#contact">{{ i18n "services.ai.title" }}</a></h4>
+              <p class="description">{{ i18n "services.ai.content" }}</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="mdi mdi-code-braces"></i></div>
               <h4 class="title"><a href="#contact">{{ i18n "services.dev.title" }}</a></h4>
               <p class="description">{{ i18n "services.dev.content" }}</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <h4 class="title"><a href="#contact">{{ i18n "services.code-improvement.title" }}</a></h4>
-              <p class="description">{{ i18n "services.code-improvement.content" }}</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="mdi mdi-update"></i></div>
               <h4 class="title"><a href="#contact">{{ i18n "services.lts.title" }}</a></h4>
               <p class="description">{{ i18n "services.lts.content" }}</p>
             </div>
@@ -227,6 +231,7 @@
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="mdi mdi-server-network"></i></div>
               <h4 class="title"><a href="#contact">{{ i18n "services.infra.title" }}</a></h4>
               <p class="description">{{ i18n "services.infra.content" }}</p>
             </div>
@@ -245,32 +250,32 @@
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>{{ i18n "numbers.domains" }}</strong></p>
+              <i class="mdi mdi-star"></i>
+              <span data-purecounter-start="0" data-purecounter-end="750" data-purecounter-duration="2" class="purecounter"></span>
+              <p><strong>{{ i18n "numbers.stars" }}</strong></p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+              <i class="mdi mdi-account-group"></i>
+              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>{{ i18n "numbers.orgs" }}</strong></p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="9" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>{{ i18n "numbers.composer" }}</strong></p>
+              <i class="mdi mdi-flash"></i>
+              <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>{{ i18n "numbers.actions" }}</strong></p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="1" class="purecounter"></span>
+              <i class="mdi mdi-source-repository-multiple"></i>
+              <span data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>{{ i18n "numbers.repos" }}</strong></p>
             </div>
           </div>
