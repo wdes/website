@@ -2,30 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wdes.fr/fr/index.html</loc>
+    <loc>https://wdes.fr/fr/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wdes.fr/en/index.html"
+                href="https://wdes.fr/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wdes.fr/fr/index.html"
+                href="https://wdes.fr/fr/"
                 />
   </url><url>
-    <loc>https://wdes.fr/fr/app-privacy-policy.html</loc>
+    <loc>https://wdes.fr/fr/app-privacy-policy/</loc>
   </url><url>
-    <loc>https://wdes.fr/fr/legal.html</loc>
+    <loc>https://wdes.fr/fr/legal/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wdes.fr/en/legal.html"
+                href="https://wdes.fr/en/legal/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wdes.fr/fr/legal.html"
+                href="https://wdes.fr/fr/legal/"
                 />
   </url>
 </urlset>

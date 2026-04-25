@@ -2,28 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wdes.fr/en/legal.html</loc>
+    <loc>https://wdes.fr/en/legal/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wdes.fr/fr/legal.html"
+                href="https://wdes.fr/fr/legal/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wdes.fr/en/legal.html"
+                href="https://wdes.fr/en/legal/"
                 />
   </url><url>
-    <loc>https://wdes.fr/en/index.html</loc>
+    <loc>https://wdes.fr/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wdes.fr/fr/index.html"
+                href="https://wdes.fr/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://wdes.fr/en/index.html"
+                href="https://wdes.fr/en/"
                 />
   </url>
 </urlset>
