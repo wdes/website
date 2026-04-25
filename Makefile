@@ -1,4 +1,4 @@
-IMAGE="floryn90/hugo:0.154.0-ext-alpine"
+IMAGE="floryn90/hugo:0.160.1-ext-alpine"
 
 CONTAINER_NAME="wdes.fr"
 PROJECT_NAME="wdes.fr"
