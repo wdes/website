@@ -159,11 +159,29 @@
     });
 
     /**
+     * Typed.js initialization
+     */
+    const typedEl = select('.typed')
+    if (typedEl) {
+        let typedStrings = typedEl.getAttribute('data-typed-items')
+        if (typedStrings) {
+            typedStrings = typedStrings.split(',').map(s => s.trim())
+            new Typed('.typed', {
+                strings: typedStrings,
+                loop: true,
+                typeSpeed: 50,
+                backSpeed: 30,
+                backDelay: 2000,
+            })
+        }
+    }
+
+    /**
      * Animation on scroll
      */
     window.addEventListener('load', () => {
         AOS.init({
-            duration: 1000,
+            duration: 800,
             easing: "ease-in-out",
             once: true,
             mirror: false

@@ -3,50 +3,65 @@ desc = "Wdes SAS — Open-source engineering, infrastructure, and AI consulting 
 
 [head]
 title = "Welcome to Wdes SAS"
-motd = "Open-source software, infrastructure, and AI — built with care"
+typed-strings = "Open-source tools, AI consulting, Rust &amp; PHP, Infrastructure, Long-term support"
 
 [menu]
 home = "Home"
 about = "About"
 projects = "Projects"
 services = "Services"
+contact = "Contact"
 
 [about]
 header = "About Wdes SAS"
 content = """
 Wdes SAS is a French company specialising in open-source software, infrastructure engineering, and AI consulting.
-We build tools in <strong>Rust</strong>, <strong>PHP</strong>, and <strong>TypeScript</strong> used by thousands of developers worldwide.<br>
+We build tools in <strong>Rust</strong> and <strong>PHP</strong>, and handle <strong>Debian packaging</strong> for thousands of users worldwide.<br>
 Wdes ® is a registered trademark on <a href="https://data.inpi.fr/marques/FR4828955?q=Wdes#FR4828955" target="_blank" rel="noopener">INPI</a>.
 """
 
-[about.projects.code-lts]
-header = "Code LTS"
-content = """
-Maintain and modernise legacy code so it keeps running safely.
-Projects like <strong>Doctum</strong> (350+ ★) and the <strong>jQuery Fullscreen Plugin</strong> (330+ ★) are used across the ecosystem.<br>
-<a href="https://github.com/code-lts" target="_blank" rel="noopener">GitHub</a>
-"""
+[projects]
+header = "Featured Projects"
+content = "Open-source tools trusted by developers worldwide"
 
-[about.projects.sudo-bot]
-header = "Sudo-Bot"
-content = """
-A suite of <strong>GitHub Actions</strong> and Docker images for CI/CD: PR merge, fork sync, Docker signing, Scrutinizer coverage, and more.<br>
-<a href="https://github.com/sudo-bot" target="_blank" rel="noopener">GitHub</a>
-"""
+[projects.doctum]
+title = "Doctum"
+desc = "PHP API documentation generator, forked from Sami and actively maintained."
+lang = "PHP"
+url = "https://github.com/code-lts/doctum"
 
-[about.projects.mail]
-header = "Mail Autodiscover"
-content = """
-A Rust-powered Docker image for dynamic <strong>Autodiscover &amp; Autoconfig</strong> — supports Outlook, Thunderbird, Apple, and Android.<br>
-<a href="https://github.com/wdes/mail-autodiscover-autoconfig" target="_blank" rel="noopener">GitHub</a> (25+ ★)
-"""
+[projects.mail-autodiscover]
+title = "Mail Autodiscover"
+desc = "Rust-powered Docker image for dynamic Autodiscover &amp; Autoconfig. Supports Outlook, Thunderbird, Apple, Android."
+lang = "Rust"
+url = "https://github.com/wdes/mail-autodiscover-autoconfig"
 
-[about.projects.wdes]
-header = "Wdes"
-content = """
-Our home for tools and libraries in PHP, TypeScript, and <a href="https://www.rust-lang.org/" target="_blank" rel="noopener">Rust</a>: DNS tooling, security auditing, infrastructure monitoring, and more.<br>
-<a href="https://github.com/wdes" target="_blank" rel="noopener">GitHub</a>
-"""
+[projects.security]
+title = "Security Tools"
+desc = "Security auditing and vulnerability management tools written in Rust."
+lang = "Rust"
+url = "https://github.com/wdes/security"
+
+[projects.phpmyadmin]
+title = "phpMyAdmin"
+desc = "The leading web-based MySQL/MariaDB administration tool. We handle ongoing maintenance and releases."
+lang = "PHP"
+url = "https://www.phpmyadmin.net/"
+
+[projects.debian]
+title = "Debian Maintainer"
+desc = "Official Debian package maintainer — packaging and maintaining software in the Debian archive for millions of users."
+lang = "Debian"
+url = "https://qa.debian.org/developer.php?login=williamdes@wdes.fr"
+
+[projects.action-pr-merge]
+title = "Action PR Merge"
+desc = "A GitHub Action written in Rust to automatically merge pull requests when a specific label is added."
+lang = "Rust"
+url = "https://github.com/sudo-bot/action-pull-request-merge"
+
+[tech]
+header = "Technologies"
 
 [services]
 header = "Services"
@@ -54,7 +69,7 @@ content = "What we can do for your business"
 
 [services.ai]
 title = "AI Consulting"
-content = "We help companies adopt AI effectively — from integrating LLMs into your workflows to improving the quality of AI-generated output through better prompting, fine-tuning, and review processes."
+content = "We help companies adopt AI effectively — from integrating LLMs into workflows to improving output quality through business-specific tests and guardrails that ensure reliable results."
 
 [services.dev]
 title = "Software Development"
@@ -68,9 +83,16 @@ content = "Legacy code holding you back? We migrate, modernise, and maintain agi
 title = "Infrastructure"
 content = "Server setup, network architecture, OS migrations, mail infrastructure, monitoring, and containerised deployments with Docker."
 
+[numbers]
+stars = "GitHub Stars"
+years = "Years Active"
+actions = "GitHub Actions"
+repos = "Repositories"
+
 [contact]
-header = "Contact"
-content = "Send us an email at <a href=\"%s\">%s</a> — we will be happy to hear from you."
+header = "Get in Touch"
+content = "Have a project in mind? Need help with legacy code or AI integration?"
+cta = "Email Us"
 
 [footer]
 designed_by = "Theme designed by"
@@ -82,12 +104,6 @@ legal-intracom-number = "VAT: "
 legal-EORI-number = "EORI: "
 legal-DUNS-number = "D-U-N-S: "
 
-[numbers]
-stars = "GitHub Stars"
-orgs = "Organizations"
-actions = "GitHub Actions"
-repos = "Repositories"
-
 [hidden]
 back-to-top = "Back to top"
 twitter = "Twitter"
@@ -96,3 +112,4 @@ gitlab = "GitLab"
 linkedin = "LinkedIn"
 email = "E-Mail"
 legal = "Legal information"
+lang-switch = "Français"

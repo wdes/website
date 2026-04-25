@@ -11,6 +11,34 @@
 body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
+    background: url("{{ .Site.BaseURL }}assets/img/hero-bg.svg") top right no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(20, 60, 100, 0.25) 0%,
+        rgba(255, 255, 255, 0.08) 40%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+    backdrop-filter: saturate(1.2) brightness(1.05);
+    -webkit-backdrop-filter: saturate(1.2) brightness(1.05);
+    z-index: 0;
+    pointer-events: none;
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
 }
 
 a {
@@ -346,9 +374,7 @@ h6 {
 #hero {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(55, 142, 181, 0.5), rgba(55, 142, 181, 0.2)), url("{{ .Site.BaseURL }}assets/img/hero-bg.svg") top right no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: transparent;
     position: relative;
     margin-bottom: -90px;
 }
@@ -385,29 +411,61 @@ h6 {
     text-shadow: -1px 0 2px #2f4d5a;
 }
 
+#hero .hero-cta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 #hero .btn-get-started {
-    font-size: 36px;
+    font-size: 16px;
+    font-weight: 600;
     display: inline-block;
-    padding: 4px 0;
+    padding: 12px 32px;
     border-radius: 50px;
     transition: 0.3s ease-in-out;
-    margin: 10px;
-    width: 64px;
-    height: 64px;
-    text-align: center;
-    border: 2px solid #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #67b0d1;
+    border: 2px solid #67b0d1;
     color: #fff;
 }
 
 #hero .btn-get-started:hover {
-    padding-top: 8px;
+    background: #409cc5;
+    border-color: #409cc5;
+}
+
+#hero .btn-get-started i {
+    margin-left: 4px;
+}
+
+#hero .btn-projects {
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+#hero .btn-projects:hover {
     background: rgba(255, 255, 255, 0.15);
 }
 
-@media (min-width: 1024px) {
-    #hero {
-        background-attachment: fixed;
-    }
+#hero .btn-projects i {
+    margin-left: 4px;
+}
+
+#hero .typed-cursor {
+    color: #fff;
+    font-size: 20px;
 }
 
 @media (max-width: 768px) {
@@ -428,10 +486,26 @@ h6 {
 section {
     padding: 60px 0;
     overflow: hidden;
+    background: transparent;
+}
+
+section > .container {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    padding: 48px 32px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
 }
 
 .section-bg {
-    background-color: #f4f9fc;
+    background: transparent;
+}
+
+.section-bg > .container {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: rgba(255, 255, 255, 0.65);
 }
 
 .section-title {
@@ -502,20 +576,13 @@ section {
   # About
   --------------------------------------------------------------*/
 .about {
-    background-color: #c5dbe8;
+    background: transparent;
     padding: 60px 0;
     position: relative;
 }
 
 .about::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.75);
-    z-index: 9;
+    display: none;
 }
 
 .about .container {
@@ -599,17 +666,20 @@ section {
     padding: 30px;
     position: relative;
     overflow: hidden;
-    background: #fff;
-    box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(68, 88, 144, 0.08);
     transition: all 0.3s ease-in-out;
-    border-radius: 8px;
+    border-radius: 12px;
     z-index: 1;
 }
 
 .services .icon-box::before {
     content: "";
     position: absolute;
-    background: white;
+    background: rgba(255, 255, 255, 0.3);
     right: 0;
     left: 0;
     bottom: 0;
@@ -619,7 +689,7 @@ section {
 }
 
 .services .icon-box:hover::before {
-    background: #67b0d1;
+    background: rgba(103, 176, 209, 0.85);
     top: 0;
     border-radius: 0px;
 }
@@ -1336,4 +1406,201 @@ section {
     #footer .footer-top .footer-info {
         margin: -20px 0 30px 0;
     }
+}
+
+/*--------------------------------------------------------------
+  # About Text
+  --------------------------------------------------------------*/
+.about-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/*--------------------------------------------------------------
+  # Tech Stack Section
+  --------------------------------------------------------------*/
+.tech-stack {
+    padding: 40px 0;
+}
+
+.tech-icons {
+    gap: 0;
+}
+
+.tech-icon {
+    text-align: center;
+    padding: 20px 24px;
+    transition: 0.3s;
+    cursor: default;
+}
+
+.tech-icon:hover {
+    transform: translateY(-4px);
+}
+
+.tech-icon i {
+    font-size: 40px;
+    color: #67b0d1;
+    display: block;
+    margin-bottom: 8px;
+    transition: 0.3s;
+}
+
+.tech-icon:hover i {
+    color: #409cc5;
+}
+
+.tech-icon span {
+    font-size: 13px;
+    color: #777;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/*--------------------------------------------------------------
+  # Featured Projects Section
+  --------------------------------------------------------------*/
+.projects {
+    padding: 60px 0;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    padding: 28px;
+    height: 100%;
+    transition: 0.3s;
+    position: relative;
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 30px rgba(103, 176, 209, 0.12);
+    transform: translateY(-4px);
+    border-color: rgba(103, 176, 209, 0.4);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.project-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-card-header h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #2f4d5a;
+}
+
+.project-badges {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.badge-lang {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #e8f4f8;
+    color: #409cc5;
+}
+
+.badge-stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #fff8e1;
+    color: #f5a623;
+}
+
+.badge-stars i {
+    font-size: 14px;
+}
+
+.project-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #67b0d1;
+    transition: 0.3s;
+}
+
+.project-link:hover {
+    color: #2f4d5a;
+}
+
+.project-link i {
+    font-size: 16px;
+}
+
+.project-link i:last-child {
+    font-size: 12px;
+}
+
+/*--------------------------------------------------------------
+  # Contact CTA
+  --------------------------------------------------------------*/
+.contact-cta-btn {
+    display: inline-block;
+    padding: 16px 48px;
+    background: #67b0d1;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-cta-btn:hover {
+    background: #409cc5;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(103, 176, 209, 0.4);
+}
+
+.contact-cta-btn i {
+    margin-right: 8px;
+}
+
+/*--------------------------------------------------------------
+  # Language Switcher
+  --------------------------------------------------------------*/
+.lang-switch {
+    opacity: 0.8;
+    font-size: 14px !important;
+}
+
+.lang-switch:hover {
+    opacity: 1;
+}
+
+.lang-switch i {
+    margin-right: 4px;
 }

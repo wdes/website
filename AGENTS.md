@@ -78,6 +78,12 @@ make version        # print Hugo version
 make fix-perms      # chmod public/ after a containerized build (777/666)
 ```
 
+**`make serve` and `make build` share the same Docker container name (`wdes.fr`).**
+You cannot run both at the same time. When `make serve` is running, do NOT stop
+it to run `make build` — the dev server watches files and rebuilds automatically
+on every change. Only use `make build` when no dev server is running (e.g. in CI
+or for a final check).
+
 The CI workflow runs `make build`, then copies `wdes.fr/public/*` onto the
 `gh-pages` branch with a `CNAME` (`wdes.fr`) and `.nojekyll`. Pushes to
 `gh-pages` are signed (GPG key from secrets).

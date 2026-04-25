@@ -98,7 +98,6 @@
     <!-- Matomo -->
     <script>
     var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function() {
@@ -133,8 +132,12 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">{{ i18n "menu.home" }}</a></li>
           <li><a class="nav-link scrollto" href="#about">{{ i18n "menu.about" }}</a></li>
-          <li><a class="nav-link scrollto" href="#projects">{{ i18n "menu.projects" }}</a></li>
           <li><a class="nav-link scrollto" href="#services">{{ i18n "menu.services" }}</a></li>
+          <li><a class="nav-link scrollto" href="#projects">{{ i18n "menu.projects" }}</a></li>
+          <li><a class="nav-link scrollto" href="#contact">{{ i18n "menu.contact" }}</a></li>
+          {{ range .Translations }}
+          <li><a href="{{ .Permalink }}" class="nav-link lang-switch" title="{{ i18n "hidden.lang-switch" }}"><i class="mdi mdi-translate"></i> {{ i18n "hidden.lang-switch" }}</a></li>
+          {{ end }}
         </ul>
         <i class="mdi mdi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -144,10 +147,13 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
-    <div class="hero-container" data-aos="fade-up">
+    <div class="hero-container" data-aos="zoom-in" data-aos-duration="1000">
       <h1>{{ i18n "head.title" }}</h1>
-      <h2>{{ i18n "head.motd" }}</h2>
-      <a href="#about" class="btn-get-started scrollto" title="{{ i18n "menu.about" }}"><i class="mdi mdi-chevron-double-down"></i></a>
+      <h2><span class="typed" data-typed-items="{{ i18n "head.typed-strings" }}"></span></h2>
+      <div class="hero-cta mt-4">
+        <a href="#contact" class="btn-get-started scrollto">{{ i18n "contact.cta" }} <i class="mdi mdi-arrow-right"></i></a>
+        <a href="#projects" class="btn-projects scrollto">{{ i18n "menu.projects" }} <i class="mdi mdi-chevron-double-down"></i></a>
+      </div>
     </div>
   </section><!-- End Hero -->
 
@@ -157,56 +163,52 @@
     <section id="about" class="about">
       <div class="container">
 
-        <div class="row no-gutters">
-          <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="content">
-              <h3>{{ i18n "about.header" }}</h3>
-              <p>{{ i18n "about.content" | safeHTML }}</p>
-            </div>
-          </div>
-          <div class="col-xl-7 d-flex align-items-stretch">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <i class="mdi mdi-code-tags"></i>
-                  <h4>{{ i18n "about.projects.code-lts.header" }}</h4>
-                  <p>{{ i18n "about.projects.code-lts.content" | safeHTML }}</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <i class="mdi mdi-robot"></i>
-                  <h4>{{ i18n "about.projects.sudo-bot.header" }}</h4>
-                  <p>{{ i18n "about.projects.sudo-bot.content" | safeHTML }}</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="mdi mdi-email-check"></i>
-                  <h4>{{ i18n "about.projects.mail.header" }}</h4>
-                  <p>{{ i18n "about.projects.mail.content" | safeHTML }}</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="mdi mdi-shield-check"></i>
-                  <h4>{{ i18n "about.projects.wdes.header" }}</h4>
-                  <p>{{ i18n "about.projects.wdes.content" | safeHTML }}</p>
-                </div>
-              </div>
-            </div><!-- End .content-->
+        <div class="section-title" data-aos="fade-up">
+          <h2>{{ i18n "about.header" }}</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            <p class="about-text text-center">{{ i18n "about.content" | safeHTML }}</p>
           </div>
         </div>
 
       </div>
     </section><!-- End About Section -->
 
+    <!-- ======= Tech Stack Section ======= -->
+    <section id="tech" class="tech-stack section-bg">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>{{ i18n "tech.header" }}</h2>
+        </div>
+        <div class="row justify-content-center tech-icons" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-auto tech-icon" title="Rust"><i class="icon-rust"></i><span>Rust</span></div>
+          <div class="col-auto tech-icon" title="PHP"><i class="icon-php"></i><span>PHP</span></div>
+          <div class="col-auto tech-icon" title="TypeScript"><i class="icon-javascript-alt"></i><span>TypeScript</span></div>
+          <div class="col-auto tech-icon" title="Docker"><i class="icon-docker"></i><span>Docker</span></div>
+          <div class="col-auto tech-icon" title="Debian"><i class="icon-debian"></i><span>Debian</span></div>
+          <div class="col-auto tech-icon" title="Vue.js"><i class="mdi mdi-vuejs"></i><span>Vue.js</span></div>
+          <div class="col-auto tech-icon" title="Angular"><i class="icon-angular"></i><span>Angular</span></div>
+          <div class="col-auto tech-icon" title="PostgreSQL"><i class="icon-postgres"></i><span>PostgreSQL</span></div>
+          <div class="col-auto tech-icon" title="Git"><i class="icon-git"></i><span>Git</span></div>
+          <div class="col-auto tech-icon" title="Shell"><i class="icon-shell"></i><span>Shell</span></div>
+        </div>
+      </div>
+    </section><!-- End Tech Stack Section -->
+
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    <section id="services" class="services section-bg">
       <div class="container">
 
-        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <div class="section-title" data-aos="fade-up">
           <h2>{{ i18n "services.header" }}</h2>
           <p>{{ i18n "services.content" }}</p>
         </div>
 
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
               <div class="icon"><i class="mdi mdi-head-lightbulb-outline"></i></div>
               <h4 class="title"><a href="#contact">{{ i18n "services.ai.title" }}</a></h4>
               <p class="description">{{ i18n "services.ai.content" }}</p>
@@ -214,7 +216,7 @@
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
               <div class="icon"><i class="mdi mdi-code-braces"></i></div>
               <h4 class="title"><a href="#contact">{{ i18n "services.dev.title" }}</a></h4>
               <p class="description">{{ i18n "services.dev.content" }}</p>
@@ -222,7 +224,7 @@
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
               <div class="icon"><i class="mdi mdi-update"></i></div>
               <h4 class="title"><a href="#contact">{{ i18n "services.lts.title" }}</a></h4>
               <p class="description">{{ i18n "services.lts.content" }}</p>
@@ -230,7 +232,7 @@
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
               <div class="icon"><i class="mdi mdi-server-network"></i></div>
               <h4 class="title"><a href="#contact">{{ i18n "services.infra.title" }}</a></h4>
               <p class="description">{{ i18n "services.infra.content" }}</p>
@@ -243,13 +245,13 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts  section-bg">
+    <section id="counts" class="counts">
       <div class="container">
 
         <div class="row no-gutters">
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
+            <div class="count-box" data-aos="fade-up" data-aos-delay="100">
               <i class="mdi mdi-star"></i>
               <span data-purecounter-start="0" data-purecounter-end="750" data-purecounter-duration="2" class="purecounter"></span>
               <p><strong>{{ i18n "numbers.stars" }}</strong></p>
@@ -257,15 +259,15 @@
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="mdi mdi-account-group"></i>
-              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>{{ i18n "numbers.orgs" }}</strong></p>
+            <div class="count-box" data-aos="fade-up" data-aos-delay="200">
+              <i class="mdi mdi-calendar-clock"></i>
+              <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>{{ i18n "numbers.years" }}</strong></p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
+            <div class="count-box" data-aos="fade-up" data-aos-delay="300">
               <i class="mdi mdi-flash"></i>
               <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>{{ i18n "numbers.actions" }}</strong></p>
@@ -273,7 +275,7 @@
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
+            <div class="count-box" data-aos="fade-up" data-aos-delay="400">
               <i class="mdi mdi-source-repository-multiple"></i>
               <span data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>{{ i18n "numbers.repos" }}</strong></p>
@@ -285,15 +287,135 @@
       </div>
     </section><!-- End Counts Section -->
 
+    <!-- ======= Featured Projects Section ======= -->
+    <section id="projects" class="projects">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>{{ i18n "projects.header" }}</h2>
+          <p>{{ i18n "projects.content" }}</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-right" data-aos-delay="100">
+            <div class="project-card">
+              <div class="project-card-header">
+                <h4>{{ i18n "projects.doctum.title" }}</h4>
+                <div class="project-badges">
+                  <span class="badge-lang">{{ i18n "projects.doctum.lang" }}</span>
+                  <span class="badge-stars"><i class="mdi mdi-star"></i> 351</span>
+                </div>
+              </div>
+              <p>{{ i18n "projects.doctum.desc" | safeHTML }}</p>
+              <a href="{{ i18n "projects.doctum.url" }}" target="_blank" rel="noopener" class="project-link">
+                <i class="mdi mdi-github"></i> GitHub <i class="mdi mdi-open-in-new"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-left" data-aos-delay="100">
+            <div class="project-card">
+              <div class="project-card-header">
+                <h4>{{ i18n "projects.phpmyadmin.title" }}</h4>
+                <div class="project-badges">
+                  <span class="badge-lang">{{ i18n "projects.phpmyadmin.lang" }}</span>
+                </div>
+              </div>
+              <p>{{ i18n "projects.phpmyadmin.desc" | safeHTML }}</p>
+              <a href="{{ i18n "projects.phpmyadmin.url" }}" target="_blank" rel="noopener" class="project-link">
+                <i class="mdi mdi-web"></i> phpmyadmin.net <i class="mdi mdi-open-in-new"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-right" data-aos-delay="200">
+            <div class="project-card">
+              <div class="project-card-header">
+                <h4>{{ i18n "projects.debian.title" }}</h4>
+                <div class="project-badges">
+                  <span class="badge-lang">{{ i18n "projects.debian.lang" }}</span>
+                </div>
+              </div>
+              <p>{{ i18n "projects.debian.desc" | safeHTML }}</p>
+              <a href="{{ i18n "projects.debian.url" }}" target="_blank" rel="noopener" class="project-link">
+                <i class="mdi mdi-open-in-new"></i> Debian QA
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-left" data-aos-delay="200">
+            <div class="project-card">
+              <div class="project-card-header">
+                <h4>{{ i18n "projects.security.title" }}</h4>
+                <div class="project-badges">
+                  <span class="badge-lang">{{ i18n "projects.security.lang" }}</span>
+                  <span class="badge-stars"><i class="mdi mdi-star"></i> 34</span>
+                </div>
+              </div>
+              <p>{{ i18n "projects.security.desc" | safeHTML }}</p>
+              <a href="{{ i18n "projects.security.url" }}" target="_blank" rel="noopener" class="project-link">
+                <i class="mdi mdi-github"></i> GitHub <i class="mdi mdi-open-in-new"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-left" data-aos-delay="200">
+            <div class="project-card">
+              <div class="project-card-header">
+                <h4>{{ i18n "projects.mail-autodiscover.title" }}</h4>
+                <div class="project-badges">
+                  <span class="badge-lang">{{ i18n "projects.mail-autodiscover.lang" }}</span>
+                  <span class="badge-stars"><i class="mdi mdi-star"></i> 26</span>
+                </div>
+              </div>
+              <p>{{ i18n "projects.mail-autodiscover.desc" | safeHTML }}</p>
+              <a href="{{ i18n "projects.mail-autodiscover.url" }}" target="_blank" rel="noopener" class="project-link">
+                <i class="mdi mdi-github"></i> GitHub <i class="mdi mdi-open-in-new"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-right" data-aos-delay="300">
+            <div class="project-card">
+              <div class="project-card-header">
+                <h4>{{ i18n "projects.action-pr-merge.title" }}</h4>
+                <div class="project-badges">
+                  <span class="badge-lang">{{ i18n "projects.action-pr-merge.lang" }}</span>
+                  <span class="badge-stars"><i class="mdi mdi-star"></i> 9</span>
+                </div>
+              </div>
+              <p>{{ i18n "projects.action-pr-merge.desc" | safeHTML }}</p>
+              <a href="{{ i18n "projects.action-pr-merge.url" }}" target="_blank" rel="noopener" class="project-link">
+                <i class="mdi mdi-github"></i> GitHub <i class="mdi mdi-open-in-new"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Projects Section -->
+
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>{{ i18n "contact.header" }}</h2>
-          <p>{{ printf (i18n "contact.content") .Site.Params.links.mailto .Site.Params.links.email | safeHTML }}</p>
+          <p>{{ i18n "contact.content" }}</p>
         </div>
 
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <a href="{{ .Site.Params.links.mailto }}" class="contact-cta-btn">
+              <i class="mdi mdi-email"></i> {{ i18n "contact.cta" }}
+            </a>
+            <p class="mt-3">
+              <a href="{{ .Site.Params.links.mailto }}">{{ .Site.Params.links.email }}</a>
+            </p>
+          </div>
+        </div>
 
       </div>
     </section><!-- End Contact Section -->

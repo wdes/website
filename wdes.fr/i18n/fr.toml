@@ -3,50 +3,65 @@ desc = "Wdes SAS — Ingénierie open-source, infrastructure et conseil en IA, b
 
 [head]
 title = "Bienvenue chez Wdes SAS"
-motd = "Logiciel open-source, infrastructure et IA — conçus avec soin"
+typed-strings = "Outils open-source, Conseil en IA, Rust &amp; PHP, Infrastructure, Support à long terme"
 
 [menu]
 home = "Accueil"
 about = "À propos"
 projects = "Projets"
 services = "Services"
+contact = "Contact"
 
 [about]
 header = "À propos de Wdes SAS"
 content = """
 Wdes SAS est une entreprise française spécialisée dans le logiciel open-source, l'ingénierie d'infrastructure et le conseil en IA.
-Nous développons des outils en <strong>Rust</strong>, <strong>PHP</strong> et <strong>TypeScript</strong> utilisés par des milliers de développeurs dans le monde.<br>
+Nous développons des outils en <strong>Rust</strong> et <strong>PHP</strong>, et nous réalisons du <strong>packaging Debian</strong> pour des milliers d'utilisateurs dans le monde.<br>
 Wdes ® est une marque déposée à l'<a href="https://data.inpi.fr/marques/FR4828955?q=Wdes#FR4828955" target="_blank" rel="noopener">INPI</a>.
 """
 
-[about.projects.code-lts]
-header = "Code LTS"
-content = """
-Maintenir et moderniser du code legacy pour qu'il continue à fonctionner en toute sécurité.
-Des projets comme <strong>Doctum</strong> (350+ ★) et le <strong>jQuery Fullscreen Plugin</strong> (330+ ★) sont largement utilisés.<br>
-<a href="https://github.com/code-lts" target="_blank" rel="noopener">GitHub</a>
-"""
+[projects]
+header = "Projets phares"
+content = "Des outils open-source utilisés par des développeurs dans le monde entier"
 
-[about.projects.sudo-bot]
-header = "Sudo-Bot"
-content = """
-Une suite d'<strong>Actions GitHub</strong> et d'images Docker pour le CI/CD : merge de PR, synchronisation de forks, signature Docker, couverture Scrutinizer, et bien plus.<br>
-<a href="https://github.com/sudo-bot" target="_blank" rel="noopener">GitHub</a>
-"""
+[projects.doctum]
+title = "Doctum"
+desc = "Générateur de documentation d'API PHP, fork de Sami activement maintenu."
+lang = "PHP"
+url = "https://github.com/code-lts/doctum"
 
-[about.projects.mail]
-header = "Mail Autodiscover"
-content = """
-Une image Docker en Rust pour la configuration dynamique <strong>Autodiscover &amp; Autoconfig</strong> — compatible Outlook, Thunderbird, Apple et Android.<br>
-<a href="https://github.com/wdes/mail-autodiscover-autoconfig" target="_blank" rel="noopener">GitHub</a> (25+ ★)
-"""
+[projects.mail-autodiscover]
+title = "Mail Autodiscover"
+desc = "Image Docker en Rust pour la configuration dynamique Autodiscover &amp; Autoconfig. Compatible Outlook, Thunderbird, Apple, Android."
+lang = "Rust"
+url = "https://github.com/wdes/mail-autodiscover-autoconfig"
 
-[about.projects.wdes]
-header = "Wdes"
-content = """
-Notre espace pour les outils et bibliothèques en PHP, TypeScript et <a href="https://www.rust-lang.org/fr" target="_blank" rel="noopener">Rust</a> : outillage DNS, audit de sécurité, supervision d'infrastructure, et plus.<br>
-<a href="https://github.com/wdes" target="_blank" rel="noopener">GitHub</a>
-"""
+[projects.security]
+title = "Outils de sécurité"
+desc = "Outils d'audit de sécurité et de gestion des vulnérabilités écrits en Rust."
+lang = "Rust"
+url = "https://github.com/wdes/security"
+
+[projects.phpmyadmin]
+title = "phpMyAdmin"
+desc = "L'outil d'administration MySQL/MariaDB en ligne de référence. Nous assurons la maintenance et les releases."
+lang = "PHP"
+url = "https://www.phpmyadmin.net/"
+
+[projects.debian]
+title = "Mainteneur Debian"
+desc = "Mainteneur officiel de paquets Debian — packaging et maintenance de logiciels dans l'archive Debian pour des millions d'utilisateurs."
+lang = "Debian"
+url = "https://qa.debian.org/developer.php?login=williamdes@wdes.fr"
+
+[projects.action-pr-merge]
+title = "Action PR Merge"
+desc = "Une Action GitHub écrite en Rust pour fusionner automatiquement les pull requests lorsqu'un label spécifique est ajouté."
+lang = "Rust"
+url = "https://github.com/sudo-bot/action-pull-request-merge"
+
+[tech]
+header = "Technologies"
 
 [services]
 header = "Services"
@@ -54,7 +69,7 @@ content = "Ce que nous pouvons faire pour votre entreprise"
 
 [services.ai]
 title = "Conseil en IA"
-content = "Nous aidons les entreprises à adopter l'IA efficacement — de l'intégration de LLMs dans vos processus à l'amélioration de la qualité des résultats produits par l'IA grâce au prompting, au fine-tuning et à la revue."
+content = "Nous aidons les entreprises à adopter l'IA efficacement — de l'intégration de LLMs dans vos processus à l'amélioration de la qualité des résultats grâce à l'ajout de tests métier et la mise en place de barrières pour garantir un travail fiable."
 
 [services.dev]
 title = "Développement logiciel"
@@ -68,9 +83,16 @@ content = "Du code legacy vous freine ? Nous migrons, modernisons et maintenons 
 title = "Infrastructure"
 content = "Mise en place de serveurs, architecture réseau, migrations d'OS, infrastructure mail, supervision et déploiements conteneurisés avec Docker."
 
+[numbers]
+stars = "Étoiles GitHub"
+years = "Années d'activité"
+actions = "Actions GitHub"
+repos = "Dépôts"
+
 [contact]
-header = "Contact"
-content = "Envoyez-nous un e-mail à <a href=\"%s\">%s</a>, nous serons heureux de vous répondre."
+header = "Contactez-nous"
+content = "Un projet en tête ? Besoin d'aide avec du code legacy ou l'intégration de l'IA ?"
+cta = "Écrivez-nous"
 
 [footer]
 designed_by = "Thème conçu par"
@@ -82,12 +104,6 @@ legal-intracom-number = "TVA : "
 legal-EORI-number = "EORI : "
 legal-DUNS-number = "D-U-N-S : "
 
-[numbers]
-stars = "Étoiles GitHub"
-orgs = "Organisations"
-actions = "Actions GitHub"
-repos = "Dépôts"
-
 [hidden]
 back-to-top = "Retour en haut de page"
 twitter = "Twitter"
@@ -96,3 +112,4 @@ gitlab = "GitLab"
 linkedin = "LinkedIn"
 email = "E-Mail"
 legal = "Mentions légales"
+lang-switch = "English"
