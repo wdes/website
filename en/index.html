@@ -66,12 +66,12 @@
     
     
     
-    <link href="https://wdes.fr/assets/css/style.min.a82eff3c324a85768950c43dae086d053c3951f6ba9aef028ed11321cf95f05fbc92d743a3b4dd85f37e9f4e421c582a5ab37ff8aa2bac7a242583d90ad95f3e.css" rel="stylesheet" integrity="sha512-qC7/PDJKhXaJUMQ9rghtBTw5Ufa6mu8CjtETIc&#43;V8F&#43;8ktdDo7TdhfN&#43;n05CHFgqWrN/&#43;KorrHokJYPZCtlfPg==" crossorigin="anonymous">
-    <link rel="preload" href="https://wdes.fr/assets/css/style.min.a82eff3c324a85768950c43dae086d053c3951f6ba9aef028ed11321cf95f05fbc92d743a3b4dd85f37e9f4e421c582a5ab37ff8aa2bac7a242583d90ad95f3e.css" as="style" integrity="sha512-qC7/PDJKhXaJUMQ9rghtBTw5Ufa6mu8CjtETIc&#43;V8F&#43;8ktdDo7TdhfN&#43;n05CHFgqWrN/&#43;KorrHokJYPZCtlfPg==" crossorigin="anonymous">
+    <link href="https://wdes.fr/assets/css/style.min.aeced26cd4390bb67a2d8d7c14314b773733342f74f2dbab0c65d69a232fa768c917054f02e9db7bfc59ccaf003cd985cb24c69c79e52040c7b98c348632c284.css" rel="stylesheet" integrity="sha512-rs7SbNQ5C7Z6LY18FDFLdzczNC908turDGXWmiMvp2jJFwVPAunbe/xZzK8APNmFyyTGnHnlIEDHuYw0hjLChA==" crossorigin="anonymous">
+    <link rel="preload" href="https://wdes.fr/assets/css/style.min.aeced26cd4390bb67a2d8d7c14314b773733342f74f2dbab0c65d69a232fa768c917054f02e9db7bfc59ccaf003cd985cb24c69c79e52040c7b98c348632c284.css" as="style" integrity="sha512-rs7SbNQ5C7Z6LY18FDFLdzczNC908turDGXWmiMvp2jJFwVPAunbe/xZzK8APNmFyyTGnHnlIEDHuYw0hjLChA==" crossorigin="anonymous">
 
     
     
-    <link href="https://wdes.fr/assets/vendor/MaterialDesignIcons/css/materialdesignicons.min.min.5a3add4ad4f10a1c4410174dea22e3af7b27d71e2b37926395966a0a0cfeeff1be673d400a306c6cee2296080145a4282181e1c26107413ed5f61483b51d3cab.css" rel="stylesheet" integrity="sha512-WjrdStTxChxEEBdN6iLjr3sn1x4rN5JjlZZqCgz&#43;7/G&#43;Zz1ACjBsbO4ilggBRaQoIYHhwmEHQT7V9hSDtR08qw==" crossorigin="anonymous">
+    <link href="https://wdes.fr/assets/vendor/MaterialDesignIcons/css/materialdesignicons.min.min.05b2777a7c331c24f76c59224caeb37d5ab94958e909a8573b2749bbd1dd712e4a14f5026c70a428218051b7a64691cc7ce49940ff79b86f3a4d19de4622d975.css" rel="stylesheet" integrity="sha512-BbJ3enwzHCT3bFkiTK6zfVq5SVjpCahXOydJu9HdcS5KFPUCbHCkKCGAUbemRpHMfOSZQP95uG86TRneRiLZdQ==" crossorigin="anonymous">
 
     
     
@@ -79,7 +79,6 @@
     
     <script>
     var _paq = window._paq = window._paq || [];
-     
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function() {
@@ -109,8 +108,12 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#projects">Projects</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#projects">Projects</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          
+          <li><a href="https://wdes.fr/fr/" class="nav-link lang-switch" title="Français"><i class="mdi mdi-translate"></i> Français</a></li>
+          
         </ul>
         <i class="mdi mdi-list mobile-nav-toggle"></i>
       </nav>
@@ -120,10 +123,13 @@
 
   
   <section id="hero">
-    <div class="hero-container" data-aos="fade-up">
+    <div class="hero-container" data-aos="zoom-in" data-aos-duration="1000">
       <h1>Welcome to Wdes SAS</h1>
-      <h2>Open-source software, infrastructure, and AI — built with care</h2>
-      <a href="#about" class="btn-get-started scrollto" title="About"><i class="mdi mdi-chevron-double-down"></i></a>
+      <h2><span class="typed" data-typed-items="Open-source tools, AI consulting, Rust &amp;amp; PHP, Infrastructure, Long-term support"></span></h2>
+      <div class="hero-cta mt-4">
+        <a href="#contact" class="btn-get-started scrollto">Email Us <i class="mdi mdi-arrow-right"></i></a>
+        <a href="#projects" class="btn-projects scrollto">Projects <i class="mdi mdi-chevron-double-down"></i></a>
+      </div>
     </div>
   </section>
 
@@ -133,50 +139,16 @@
     <section id="about" class="about">
       <div class="container">
 
-        <div class="row no-gutters">
-          <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="content">
-              <h3>About Wdes SAS</h3>
-              <p>Wdes SAS is a French company specialising in open-source software, infrastructure engineering, and AI consulting.
-We build tools in <strong>Rust</strong>, <strong>PHP</strong>, and <strong>TypeScript</strong> used by thousands of developers worldwide.<br>
+        <div class="section-title" data-aos="fade-up">
+          <h2>About Wdes SAS</h2>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            <p class="about-text text-center">Wdes SAS is a French company specialising in open-source software, infrastructure engineering, and AI consulting.
+We build tools in <strong>Rust</strong> and <strong>PHP</strong>, and handle <strong>Debian packaging</strong> for thousands of users worldwide.<br>
 Wdes ® is a registered trademark on <a href="https://data.inpi.fr/marques/FR4828955?q=Wdes#FR4828955" target="_blank" rel="noopener">INPI</a>.
 </p>
-            </div>
-          </div>
-          <div class="col-xl-7 d-flex align-items-stretch">
-            <div class="icon-boxes d-flex flex-column justify-content-center">
-              <div class="row">
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <i class="mdi mdi-code-tags"></i>
-                  <h4>Code LTS</h4>
-                  <p>Maintain and modernise legacy code so it keeps running safely.
-Projects like <strong>Doctum</strong> (350+ ★) and the <strong>jQuery Fullscreen Plugin</strong> (330+ ★) are used across the ecosystem.<br>
-<a href="https://github.com/code-lts" target="_blank" rel="noopener">GitHub</a>
-</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <i class="mdi mdi-robot"></i>
-                  <h4>Sudo-Bot</h4>
-                  <p>A suite of <strong>GitHub Actions</strong> and Docker images for CI/CD: PR merge, fork sync, Docker signing, Scrutinizer coverage, and more.<br>
-<a href="https://github.com/sudo-bot" target="_blank" rel="noopener">GitHub</a>
-</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="mdi mdi-email-check"></i>
-                  <h4>Mail Autodiscover</h4>
-                  <p>A Rust-powered Docker image for dynamic <strong>Autodiscover &amp; Autoconfig</strong> — supports Outlook, Thunderbird, Apple, and Android.<br>
-<a href="https://github.com/wdes/mail-autodiscover-autoconfig" target="_blank" rel="noopener">GitHub</a> (25+ ★)
-</p>
-                </div>
-                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="mdi mdi-shield-check"></i>
-                  <h4>Wdes</h4>
-                  <p>Our home for tools and libraries in PHP, TypeScript, and <a href="https://www.rust-lang.org/" target="_blank" rel="noopener">Rust</a>: DNS tooling, security auditing, infrastructure monitoring, and more.<br>
-<a href="https://github.com/wdes" target="_blank" rel="noopener">GitHub</a>
-</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -184,25 +156,46 @@ Projects like <strong>Doctum</strong> (350+ ★) and the <strong>jQuery Fullscre
     </section>
 
     
-    <section id="services" class="services">
+    <section id="tech" class="tech-stack section-bg">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Technologies</h2>
+        </div>
+        <div class="row justify-content-center tech-icons" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-auto tech-icon" title="Rust"><i class="icon-rust"></i><span>Rust</span></div>
+          <div class="col-auto tech-icon" title="PHP"><i class="icon-php"></i><span>PHP</span></div>
+          <div class="col-auto tech-icon" title="TypeScript"><i class="icon-javascript-alt"></i><span>TypeScript</span></div>
+          <div class="col-auto tech-icon" title="Docker"><i class="icon-docker"></i><span>Docker</span></div>
+          <div class="col-auto tech-icon" title="Debian"><i class="icon-debian"></i><span>Debian</span></div>
+          <div class="col-auto tech-icon" title="Vue.js"><i class="mdi mdi-vuejs"></i><span>Vue.js</span></div>
+          <div class="col-auto tech-icon" title="Angular"><i class="icon-angular"></i><span>Angular</span></div>
+          <div class="col-auto tech-icon" title="PostgreSQL"><i class="icon-postgres"></i><span>PostgreSQL</span></div>
+          <div class="col-auto tech-icon" title="Git"><i class="icon-git"></i><span>Git</span></div>
+          <div class="col-auto tech-icon" title="Shell"><i class="icon-shell"></i><span>Shell</span></div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="services" class="services section-bg">
       <div class="container">
 
-        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <div class="section-title" data-aos="fade-up">
           <h2>Services</h2>
           <p>What we can do for your business</p>
         </div>
 
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
               <div class="icon"><i class="mdi mdi-head-lightbulb-outline"></i></div>
               <h4 class="title"><a href="#contact">AI Consulting</a></h4>
-              <p class="description">We help companies adopt AI effectively — from integrating LLMs into your workflows to improving the quality of AI-generated output through better prompting, fine-tuning, and review processes.</p>
+              <p class="description">We help companies adopt AI effectively — from integrating LLMs into workflows to improving output quality through business-specific tests and guardrails that ensure reliable results.</p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
               <div class="icon"><i class="mdi mdi-code-braces"></i></div>
               <h4 class="title"><a href="#contact">Software Development</a></h4>
               <p class="description">Full-stack development in PHP, Rust, TypeScript, and Angular. We build robust, maintainable software for web and backend systems.</p>
@@ -210,7 +203,7 @@ Projects like <strong>Doctum</strong> (350+ ★) and the <strong>jQuery Fullscre
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
               <div class="icon"><i class="mdi mdi-update"></i></div>
               <h4 class="title"><a href="#contact">Long-Term Support</a></h4>
               <p class="description">Legacy code holding you back? We migrate, modernise, and maintain aging codebases so you can move forward without starting over.</p>
@@ -218,7 +211,7 @@ Projects like <strong>Doctum</strong> (350+ ★) and the <strong>jQuery Fullscre
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
               <div class="icon"><i class="mdi mdi-server-network"></i></div>
               <h4 class="title"><a href="#contact">Infrastructure</a></h4>
               <p class="description">Server setup, network architecture, OS migrations, mail infrastructure, monitoring, and containerised deployments with Docker.</p>
@@ -231,13 +224,13 @@ Projects like <strong>Doctum</strong> (350+ ★) and the <strong>jQuery Fullscre
     </section>
 
     
-    <section id="counts" class="counts  section-bg">
+    <section id="counts" class="counts">
       <div class="container">
 
         <div class="row no-gutters">
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
+            <div class="count-box" data-aos="fade-up" data-aos-delay="100">
               <i class="mdi mdi-star"></i>
               <span data-purecounter-start="0" data-purecounter-end="750" data-purecounter-duration="2" class="purecounter"></span>
               <p><strong>GitHub Stars</strong></p>
@@ -245,15 +238,15 @@ Projects like <strong>Doctum</strong> (350+ ★) and the <strong>jQuery Fullscre
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
-              <i class="mdi mdi-account-group"></i>
-              <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Organizations</strong></p>
+            <div class="count-box" data-aos="fade-up" data-aos-delay="200">
+              <i class="mdi mdi-calendar-clock"></i>
+              <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Years Active</strong></p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
+            <div class="count-box" data-aos="fade-up" data-aos-delay="300">
               <i class="mdi mdi-flash"></i>
               <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>GitHub Actions</strong></p>
@@ -261,10 +254,120 @@ Projects like <strong>Doctum</strong> (350+ ★) and the <strong>jQuery Fullscre
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
-            <div class="count-box">
+            <div class="count-box" data-aos="fade-up" data-aos-delay="400">
               <i class="mdi mdi-source-repository-multiple"></i>
               <span data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="1" class="purecounter"></span>
               <p><strong>Repositories</strong></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    
+    <section id="projects" class="projects">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Featured Projects</h2>
+          <p>Open-source tools trusted by developers worldwide</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-right" data-aos-delay="100">
+            <div class="project-card">
+              <div class="project-card-header">
+                <h4>Doctum</h4>
+                <div class="project-badges">
+                  <span class="badge-lang">PHP</span>
+                  <span class="badge-stars"><i class="mdi mdi-star"></i> 351</span>
+                </div>
+              </div>
+              <p>PHP API documentation generator, forked from Sami and actively maintained.</p>
+              <a href="https://github.com/code-lts/doctum" target="_blank" rel="noopener" class="project-link">
+                <i class="mdi mdi-github"></i> GitHub <i class="mdi mdi-open-in-new"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-left" data-aos-delay="100">
+            <div class="project-card">
+              <div class="project-card-header">
+                <h4>phpMyAdmin</h4>
+                <div class="project-badges">
+                  <span class="badge-lang">PHP</span>
+                </div>
+              </div>
+              <p>The leading web-based MySQL/MariaDB administration tool. We handle ongoing maintenance and releases.</p>
+              <a href="https://www.phpmyadmin.net/" target="_blank" rel="noopener" class="project-link">
+                <i class="mdi mdi-web"></i> phpmyadmin.net <i class="mdi mdi-open-in-new"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-right" data-aos-delay="200">
+            <div class="project-card">
+              <div class="project-card-header">
+                <h4>Debian Maintainer</h4>
+                <div class="project-badges">
+                  <span class="badge-lang">Debian</span>
+                </div>
+              </div>
+              <p>Official Debian package maintainer — packaging and maintaining software in the Debian archive for millions of users.</p>
+              <a href="https://qa.debian.org/developer.php?login=williamdes@wdes.fr" target="_blank" rel="noopener" class="project-link">
+                <i class="mdi mdi-open-in-new"></i> Debian QA
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-left" data-aos-delay="200">
+            <div class="project-card">
+              <div class="project-card-header">
+                <h4>Security Tools</h4>
+                <div class="project-badges">
+                  <span class="badge-lang">Rust</span>
+                  <span class="badge-stars"><i class="mdi mdi-star"></i> 34</span>
+                </div>
+              </div>
+              <p>Security auditing and vulnerability management tools written in Rust.</p>
+              <a href="https://github.com/wdes/security" target="_blank" rel="noopener" class="project-link">
+                <i class="mdi mdi-github"></i> GitHub <i class="mdi mdi-open-in-new"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-left" data-aos-delay="200">
+            <div class="project-card">
+              <div class="project-card-header">
+                <h4>Mail Autodiscover</h4>
+                <div class="project-badges">
+                  <span class="badge-lang">Rust</span>
+                  <span class="badge-stars"><i class="mdi mdi-star"></i> 26</span>
+                </div>
+              </div>
+              <p>Rust-powered Docker image for dynamic Autodiscover &amp; Autoconfig. Supports Outlook, Thunderbird, Apple, Android.</p>
+              <a href="https://github.com/wdes/mail-autodiscover-autoconfig" target="_blank" rel="noopener" class="project-link">
+                <i class="mdi mdi-github"></i> GitHub <i class="mdi mdi-open-in-new"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-right" data-aos-delay="300">
+            <div class="project-card">
+              <div class="project-card-header">
+                <h4>Action PR Merge</h4>
+                <div class="project-badges">
+                  <span class="badge-lang">Rust</span>
+                  <span class="badge-stars"><i class="mdi mdi-star"></i> 9</span>
+                </div>
+              </div>
+              <p>A GitHub Action written in Rust to automatically merge pull requests when a specific label is added.</p>
+              <a href="https://github.com/sudo-bot/action-pull-request-merge" target="_blank" rel="noopener" class="project-link">
+                <i class="mdi mdi-github"></i> GitHub <i class="mdi mdi-open-in-new"></i>
+              </a>
             </div>
           </div>
 
@@ -278,10 +381,20 @@ Projects like <strong>Doctum</strong> (350+ ★) and the <strong>jQuery Fullscre
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Contact</h2>
-          <p>Send us an email at <a href="mailto:contact@wdes.eu">contact@wdes.eu</a> — we will be happy to hear from you.</p>
+          <h2>Get in Touch</h2>
+          <p>Have a project in mind? Need help with legacy code or AI integration?</p>
         </div>
 
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <a href="mailto:contact@wdes.eu" class="contact-cta-btn">
+              <i class="mdi mdi-email"></i> Email Us
+            </a>
+            <p class="mt-3">
+              <a href="mailto:contact@wdes.eu">contact@wdes.eu</a>
+            </p>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -350,7 +463,7 @@ Projects like <strong>Doctum</strong> (350+ ★) and the <strong>jQuery Fullscre
     
     
     
-    <script src="https://wdes.fr/assets/js/main.min.714f5603cb7fb677354af55f8308ba268b5e1f642cd7e1549f5d0d4670f3b48b7353198ef68e3e404c9c480464ea1e6b832a83dd086701636d070e2578f12318.js" integrity="sha512-cU9WA8t/tnc1SvVfgwi6JoteH2Qs1&#43;FUn10NRnDztItzUxmO9o4&#43;QEycSARk6h5rgyqD3QhnAWNtBw4lePEjGA==" crossorigin="anonymous"></script>
+    <script src="https://wdes.fr/assets/js/main.min.36442f598bcddf0b06b8db46b52edac17f3d3e5e28629280330219b509cc247932b8ee67b793973f2faef26b289ab333e7086b2de89c808b71aa31ebcac85f04.js" integrity="sha512-NkQvWYvN3wsGuNtGtS7awX89Pl4oYpKAMwIZtQnMJHkyuO5nt5OXPy&#43;u8msomrMz5whrLeicgItxqjHryshfBA==" crossorigin="anonymous"></script>
 
 </body>
 
