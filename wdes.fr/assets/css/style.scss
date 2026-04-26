@@ -1604,3 +1604,42 @@ section > .container {
 .lang-switch i {
     margin-right: 4px;
 }
+
+.navbar a.lang-switch-mobile {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .navbar a.lang-switch-mobile {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1;
+        margin-right: 15px;
+        margin-left: 0;
+        padding: 0;
+        text-decoration: none;
+        opacity: 0.85;
+        transition: opacity 0.2s;
+    }
+
+    .navbar a.lang-switch-mobile i {
+        font-size: 22px;
+        line-height: 1;
+        margin-right: 6px;
+    }
+
+    .lang-switch-mobile-label {
+        font-family: "Raleway", sans-serif;
+    }
+
+    .navbar a.lang-switch-mobile:hover,
+    .navbar a.lang-switch-mobile:focus {
+        opacity: 1;
+        color: #fff;
+        background: transparent;
+    }
+}

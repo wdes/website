@@ -139,6 +139,9 @@
           <li><a href="{{ .Permalink }}" class="nav-link lang-switch" title="{{ i18n "hidden.lang-switch" }}"><i class="mdi mdi-translate"></i> {{ i18n "hidden.lang-switch" }}</a></li>
           {{ end }}
         </ul>
+        {{ range .Translations }}
+        <a href="{{ .Permalink }}" class="lang-switch-mobile" title="{{ i18n "hidden.lang-switch" }}" aria-label="{{ i18n "hidden.lang-switch" }}"><i class="mdi mdi-translate"></i><span class="lang-switch-mobile-label">{{ i18n "hidden.lang-switch" }}</span></a>
+        {{ end }}
         <i class="mdi mdi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
