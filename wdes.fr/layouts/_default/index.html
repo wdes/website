@@ -8,43 +8,121 @@
     <title>{{ .Language.Title }}</title>
     <meta name="description" content="{{ i18n "index-page.desc" }}">
     <meta name="keywords" content="{{ (delimit .Keywords ",") | default .Site.Params.keywords }}">
+    <meta name="author" content="William Desportes">
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ range .AllTranslations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+    {{ end }}
+    <link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}fr/">
     <!--sse-->
+    {{ $ogLocale := dict "fr" "fr_FR" "en" "en_US" }}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@wdesfr" />
-    <meta name="twitter:title" content="Wdes SAS" />
+    <meta name="twitter:title" content="{{ .Language.Title }}" />
     <meta name="twitter:description" content="{{ i18n "index-page.desc" }}" />
     <meta name="twitter:image" content="{{ .Site.BaseURL }}assets/logo/wdes_1024x1024.png" />
     <meta name="p:domain_verify" content="4e98cb9abc0163d6ebb1b57e90fc35e3" />
-    <meta property="og:title" content="Wdes SAS" />
+    <meta property="og:site_name" content="Wdes SAS" />
+    <meta property="og:title" content="{{ .Language.Title }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ .Site.BaseURL }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:image" content="{{ .Site.BaseURL }}assets/logo/wdes_1024x1024.png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
     <meta property="og:description" content="{{ i18n "index-page.desc" }}" />
+    <meta property="og:locale" content="{{ index $ogLocale .Lang }}" />
+    {{ range .Translations }}
+    <meta property="og:locale:alternate" content="{{ index $ogLocale .Language.Lang }}" />
+    {{ end }}
 
+    {{ $orgID := printf "%s#organization" .Site.BaseURL }}
+    {{ $siteID := printf "%s#website" .Site.BaseURL }}
+    {{ $personID := "https://williamdes.eu/#person" }}
+    {{ $logoURL := printf "%sassets/logo/wdes_1024x1024.png" .Site.BaseURL }}
     <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "email": "{{ .Site.Params.links.email }}",
-            "logo": "{{ .Site.BaseURL }}assets/logo/wdes_x1024.png",
-            "url": "{{ .Site.BaseURL }}",
-            "name": "Wdes SAS",
-            "legalName": "WDES SAS",
-            "sameAs": [
-                "{{ .Site.Params.links.gitlab }}",
-                "{{ .Site.Params.links.github }}",
-                "{{ .Site.Params.links.twitter }}",
-                "{{ .Site.Params.links.linkedin }}"
-            ],
-            "funder": {
-                "@context": "http://schema.org",
-                "@type": "Person",
-                "url":"https://williamdes.eu",
-                "email": "williamdes@wdes.fr",
-                "jobTitle": "Developer",
-                "name": "William Desportes"
-            }
-        }
+    {{- $org := dict
+        "@type" "ProfessionalService"
+        "@id" $orgID
+        "name" "Wdes SAS"
+        "legalName" "WDES SAS"
+        "alternateName" "Wdes"
+        "description" (i18n "index-page.desc")
+        "url" .Site.BaseURL
+        "logo" (dict "@type" "ImageObject" "url" $logoURL "width" 1024 "height" 1024 "caption" "Wdes SAS")
+        "image" $logoURL
+        "email" .Site.Params.links.email
+        "vatID" (replace .Site.Params.legalVatNumber " " "")
+        "taxID" .Site.Params.legalNumber
+        "duns" .Site.Params.altaresDUNS
+        "foundingDate" "2017"
+        "identifier" (slice
+            (dict "@type" "PropertyValue" "propertyID" "SIRET" "value" .Site.Params.legalNumber)
+            (dict "@type" "PropertyValue" "propertyID" "VAT" "value" (replace .Site.Params.legalVatNumber " " ""))
+            (dict "@type" "PropertyValue" "propertyID" "EORI" "value" .Site.Params.douaneEORI)
+            (dict "@type" "PropertyValue" "propertyID" "DUNS" "value" .Site.Params.altaresDUNS))
+        "address" (dict
+            "@type" "PostalAddress"
+            "addressLocality" "Gourin"
+            "postalCode" "56110"
+            "addressRegion" "Bretagne"
+            "addressCountry" "FR")
+        "areaServed" (slice
+            (dict "@type" "Country" "name" "France")
+            (dict "@type" "Place" "name" "European Union")
+            (dict "@type" "Place" "name" "Worldwide"))
+        "contactPoint" (dict
+            "@type" "ContactPoint"
+            "email" .Site.Params.links.email
+            "contactType" "customer service"
+            "availableLanguage" (slice "French" "English"))
+        "founder" (dict
+            "@type" "Person"
+            "@id" $personID
+            "name" "William Desportes"
+            "givenName" "William"
+            "familyName" "Desportes"
+            "jobTitle" "Software Engineer"
+            "url" "https://williamdes.eu"
+            "email" "williamdes@wdes.fr"
+            "sameAs" (slice
+                "https://github.com/williamdes"
+                "https://gitlab.com/williamdes"
+                "https://www.linkedin.com/in/williamdes/"))
+        "knowsAbout" (slice
+            "PHP" "Rust" "TypeScript" "JavaScript" "Vue.js" "Angular" "Node.js"
+            "Debian Packaging" "Docker" "PostgreSQL" "Git"
+            "Long-Term Software Support" "Code Modernization" "Open Source Maintenance"
+            "AI Engineering" "AI Quality Assurance" "Prompt Engineering"
+            "DevOps" "Infrastructure as Code" "GitHub Actions")
+        "knowsLanguage" (slice "fr" "en")
+        "sameAs" (slice
+            .Site.Params.links.github
+            .Site.Params.links.gitlab
+            .Site.Params.links.twitter
+            .Site.Params.links.linkedin
+            .Site.Params.links.companyOfficialRegistryUrl)
+    -}}
+    {{- $website := dict
+        "@type" "WebSite"
+        "@id" $siteID
+        "url" .Site.BaseURL
+        "name" "Wdes SAS"
+        "publisher" (dict "@id" $orgID)
+        "inLanguage" (slice "fr" "en")
+    -}}
+    {{- $webpage := dict
+        "@type" "WebPage"
+        "@id" (printf "%s#webpage" .Permalink)
+        "url" .Permalink
+        "name" .Language.Title
+        "description" (i18n "index-page.desc")
+        "inLanguage" .Lang
+        "isPartOf" (dict "@id" $siteID)
+        "about" (dict "@id" $orgID)
+        "primaryImageOfPage" (dict "@type" "ImageObject" "url" $logoURL)
+    -}}
+    {{- $graph := dict "@context" "https://schema.org" "@graph" (slice $org $website $webpage) -}}
+    {{ $graph | jsonify (dict "indent" "  ") | safeJS }}
     </script>
     <!--/sse-->
     <!-- Favicons -->
