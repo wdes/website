@@ -5,7 +5,7 @@ Guidance for AI coding agents working in this repository.
 ## Project
 
 - Public website for **Wdes SAS** (https://wdes.fr).
-- Static site built with **Hugo extended** (currently `0.160.1`, pinned in `Makefile`).
+- Static site built with **Hugo extended** (currently `0.169.0`, pinned in `Makefile`).
 - Single-binary build, no Node/npm. SCSS is compiled by Hugo (`css.Sass`).
 - Deployed to **GitHub Pages** on the `gh-pages` branch via the workflow at
   `.github/workflows/publish.yml` whenever `main` is updated.
@@ -20,7 +20,7 @@ Guidance for AI coding agents working in this repository.
     ├── config.toml
     ├── archetypes/
     ├── assets/             # SCSS, JS, vendor SCSS bundled & fingerprinted by Hugo
-    ├── content/            # _index.html (home), legal.{fr,en}.html, app-privacy-policy.fr.html
+    ├── content/            # _index.md (home), legal.{fr,en}.md, app-privacy-policy.fr.md
     ├── i18n/               # fr.toml, en.toml — all UI strings live here
     ├── layouts/_default/   # index.html (home), legal.html, app-privacy-policy.html
     ├── static/             # served as-is (favicon, robots.txt, /static/assets/{img,logo})
@@ -32,7 +32,9 @@ Guidance for AI coding agents working in this repository.
 - `defaultContentLanguage = "fr"`, `defaultContentLanguageInSubdir = true`.
 - Both languages live under `/fr/` and `/en/`.
 - Root `/` is served as a meta-refresh redirect to `/fr/` (Hugo-generated alias).
-- Translations: `*.fr.html` / `*.en.html` content files; `_index.html` (no
+- Languages are configured with `locale` (`en`/`fr`) and `label` (`English`/
+  `Français`); the old `languageCode`/`languageName` keys are deprecated.
+- Translations: `*.fr.md` / `*.en.md` content files; `_index.md` (no
   language code) is shared by both languages.
 - All user-visible strings come from `i18n/{en,fr}.toml` via `{{ i18n "key" }}`.
   When you add a string, add it to **both** files.
@@ -57,12 +59,14 @@ Guidance for AI coding agents working in this repository.
   the default-language home, and the second one is written to the same path as
   the rendered page (`/fr/index.html`), overwriting the real content with a
   meta-refresh that points back to itself. Keep pretty URLs.
-- `disableKinds = ["taxonomy", "taxonomyTerm"]` triggers a deprecation warning
-  (`taxonomyterm` should be `taxonomy`). Harmless today; clean up if touching
-  the config.
-- `hreflang` in the FR `sitemap.xml` lists both alternates as `hreflang="en"`
-  (the second should be `hreflang="fr"`). This comes from Hugo's default
-  sitemap template; would require a custom `layouts/sitemap.xml` to fix.
+- `disableKinds` must not contain `taxonomyTerm` (use `taxonomy`); the legacy
+  spelling is deprecated since Hugo 0.150 and was removed from the config.
+- `content/**` files must be `.md`, not `.html`. Since Hugo 0.169, `text/html`
+  content is rejected by `security.allowContent` and the build fails with
+  `access denied: "text/html" is not whitelisted`.
+- `css.Sass` logs a *libsass is deprecated* warning (Hugo ≥ 0.153). Harmless
+  for now; switching to `dart-sass` needs the Dart Sass binary in the build
+  image plus a CSS-output review (Bootstrap 5.0 SCSS renders differently).
 
 ## Build & run
 
@@ -101,14 +105,14 @@ The CI workflow runs `make build`, then copies `wdes.fr/public/*` onto the
 
 ## Content authoring
 
-- Add a page: `content/<slug>.<lang>.html` with front matter:
+- Add a page: `content/<slug>.<lang>.md` with front matter:
   ```yaml
   ---
   layout: <layout-name>
   ---
   ```
   Then add `layouts/_default/<layout-name>.html`.
-- Home page front matter is in `content/_index.html` (`layout: index`).
+- Home page front matter is in `content/_index.md` (`layout: index`).
 - New translation strings → both `i18n/en.toml` and `i18n/fr.toml`.
 
 ## Things not to do

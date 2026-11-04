@@ -4,19 +4,19 @@ copyright = "2014-2026 William Desportes"
 defaultContentLanguage = "fr"
 enableRobotsTXT = true
 defaultContentLanguageInSubdir = true
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy"]
 
 [languages]
   [languages.en]
     title = "Wdes SAS website"
     weight = 2
-    languageCode = "en"
-    languageName = "English"
+    locale = "en"
+    label = "English"
   [languages.fr]
     title = "Wdes SAS - site web"
     weight = 1
-    languageCode = "fr"
-    languageName = "Français"
+    locale = "fr"
+    label = "Français"
 
 [params]
   legalNumber = "82956288300027"
