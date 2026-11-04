@@ -5,13 +5,13 @@
     <loc>https://wdes.fr/fr/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://wdes.fr/en/"
+                hreflang="fr"
+                href="https://wdes.fr/fr/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="https://wdes.fr/fr/"
+                hreflang="en"
+                href="https://wdes.fr/en/"
                 />
   </url><url>
     <loc>https://wdes.fr/fr/app-privacy-policy/</loc>
@@ -19,13 +19,13 @@
     <loc>https://wdes.fr/fr/legal/</loc>
     <xhtml:link
                 rel="alternate"
-                hreflang="en"
-                href="https://wdes.fr/en/legal/"
+                hreflang="fr"
+                href="https://wdes.fr/fr/legal/"
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="fr"
-                href="https://wdes.fr/fr/legal/"
+                hreflang="en"
+                href="https://wdes.fr/en/legal/"
                 />
   </url>
 </urlset>
