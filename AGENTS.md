@@ -5,7 +5,8 @@ Guidance for AI coding agents working in this repository.
 ## Project
 
 - Public website for **Wdes SAS** (https://wdes.fr).
-- Static site built with **Hugo extended** (currently `0.169.0`, pinned in `Makefile`).
+- Static site built with **Hugo** (currently `0.170.1`, pinned in `Makefile`;
+  the *extended* edition no longer exists since Hugo 0.170).
 - Single-binary build, no Node/npm. SCSS is compiled by Hugo (`css.Sass`).
 - Deployed to **GitHub Pages** on the `gh-pages` branch via the workflow at
   `.github/workflows/publish.yml` whenever `main` is updated.
@@ -64,9 +65,13 @@ Guidance for AI coding agents working in this repository.
 - `content/**` files must be `.md`, not `.html`. Since Hugo 0.169, `text/html`
   content is rejected by `security.allowContent` and the build fails with
   `access denied: "text/html" is not whitelisted`.
-- `css.Sass` logs a *libsass is deprecated* warning (Hugo ≥ 0.153). Harmless
-  for now; switching to `dart-sass` needs the Dart Sass binary in the build
-  image plus a CSS-output review (Bootstrap 5.0 SCSS renders differently).
+- Since Hugo 0.170 the *extended* edition and libsass are gone; `css.Sass` now
+  only supports **Dart Sass**. The build image (`ghcr.io/gohugoio/hugo`, pinned
+  in the `Makefile`) bundles it. Third-party images such as
+  `floryn90/hugo:*` do not and fail with `TOCSS-DART ... You need to install
+  Dart Sass`. Dart Sass output differs cosmetically from libsass (`rgba()` →
+  `hsla()`, fractional color channels, more decimal places); reviewed and
+  visually equivalent for this Bootstrap version.
 
 ## Build & run
 

@@ -1,4 +1,4 @@
-IMAGE="floryn90/hugo:0.169.0-ext-alpine"
+IMAGE="ghcr.io/gohugoio/hugo:v0.170.1"
 
 CONTAINER_NAME="wdes.fr"
 PROJECT_NAME="wdes.fr"
