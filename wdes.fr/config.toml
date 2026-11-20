@@ -20,6 +20,7 @@ disableKinds = ["taxonomy"]
 
 [params]
   legalNumber = "82956288300027"
+  legalEUID = "FR5601.829562883"
   legalVatNumber = "FR 13829562883"
   douaneEORI = "FR82956288300027"
   altaresDUNS = "269610966"
